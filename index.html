@@ -3,73 +3,206 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – SightEcho</title>
+  <title>SightEcho – AI Travel Insights</title>
+  <meta name="description" content="Discover the meaning behind every photo. AI-powered travel insights and audio narration in your language." />
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 24px; color: #1a1a2e; line-height: 1.7; }
-    h1 { font-size: 28px; margin-bottom: 4px; }
-    h2 { font-size: 18px; margin-top: 36px; }
-    p, li { font-size: 15px; color: #333; }
-    a { color: #6C63FF; }
-    .updated { color: #888; font-size: 13px; margin-bottom: 32px; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      margin: 0;
+      color: #1a1a2e;
+      line-height: 1.6;
+      background: #fafafa;
+    }
+    .container { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid #eee;
+      background: #fff;
+    }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 22px; font-weight: 800; color: #E8703A; letter-spacing: -0.5px; }
+    nav a { color: #555; text-decoration: none; margin-left: 24px; font-size: 14px; }
+    nav a:hover { color: #E8703A; }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin: 0 0 16px;
+      line-height: 1.2;
+    }
+    .hero p.lead {
+      font-size: 18px;
+      color: #555;
+      max-width: 620px;
+      margin: 0 auto 36px;
+    }
+
+    /* Download buttons */
+    .download-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border-radius: 10px;
+      background: #1a1a2e;
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .download-btn:hover { background: #2a2a4e; }
+    .download-btn.disabled {
+      background: #c0c0c0;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .badge-soon {
+      font-size: 11px;
+      background: rgba(255,255,255,0.2);
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 4px;
+    }
+
+    /* Features */
+    .features {
+      padding: 60px 0;
+      background: #fff;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+    .features h2 {
+      text-align: center;
+      font-size: 28px;
+      margin: 0 0 48px;
+      letter-spacing: -0.5px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+    .feature {
+      text-align: center;
+      padding: 16px;
+    }
+    .feature-icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+    .feature h3 {
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+    .feature p {
+      font-size: 14px;
+      color: #666;
+      margin: 0;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: #888;
+      font-size: 13px;
+    }
+    footer a {
+      color: #888;
+      text-decoration: none;
+      margin: 0 12px;
+    }
+    footer a:hover { color: #E8703A; }
+    .copyright { margin-top: 16px; font-size: 12px; color: #aaa; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 32px; }
+      .hero p.lead { font-size: 16px; }
+      nav a { margin-left: 12px; font-size: 13px; }
+    }
   </style>
 </head>
 <body>
 
-<h1>Privacy Policy</h1>
-<p class="updated">Last updated: April 30, 2026</p>
+<header>
+  <div class="container header-inner">
+    <div class="logo">SightEcho</div>
+    <nav>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="mailto:support@sightechoai.com">Support</a>
+    </nav>
+  </div>
+</header>
 
-<p>This Privacy Policy describes how SightEcho ("we," "us," or "our") collects, uses, and shares information when you use the <strong>SightEcho</strong> mobile application ("App").</p>
+<section class="hero">
+  <div class="container">
+    <h1>Discover the meaning<br/>behind every photo.</h1>
+    <p class="lead">SightEcho turns your travel photos into rich, narrated insights. Snap a photo, get AI-powered context and audio storytelling — wherever you are, in your language.</p>
+    <div class="download-row">
+      <a class="download-btn disabled" href="#">
+        Download on the App Store
+        <span class="badge-soon">Coming Soon</span>
+      </a>
+      <a class="download-btn" href="https://play.google.com/store/apps/details?id=com.sightecho.app" target="_blank" rel="noopener">
+        Get it on Google Play
+      </a>
+    </div>
+  </div>
+</section>
 
-<h2>1. Information We Collect</h2>
-<ul>
-  <li><strong>Account information:</strong> name and email address when you register.</li>
-  <li><strong>Images:</strong> photos you capture or select to submit for analysis. Images are uploaded to our secure servers and processed by AI vision models.</li>
-  <li><strong>Location data:</strong> approximate location (country/region) derived from device GPS or IP address to provide geographically relevant context. Precise location is not stored.</li>
-  <li><strong>Device information:</strong> device model, OS version, and app version for diagnostic purposes.</li>
-  <li><strong>Purchase information:</strong> in-app purchase records processed by Apple App Store or Google Play. We do not store payment card details.</li>
-  <li><strong>Usage data:</strong> analysis requests, feature interactions, and error logs to improve the service.</li>
-</ul>
+<section class="features">
+  <div class="container">
+    <h2>What SightEcho does</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-icon">📷</div>
+        <h3>Photo Analysis</h3>
+        <p>AI vision identifies landmarks, art, architecture, and details in your photos.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🎙️</div>
+        <h3>Audio Narration</h3>
+        <p>Listen to the story behind each scene with natural-sounding voice narration.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🌐</div>
+        <h3>Multi-language</h3>
+        <p>Available in Korean, English, and more. Read or listen in the language you prefer.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">✨</div>
+        <h3>Two Modes</h3>
+        <p>Quick general insights, or deeper docent-style narration for cultural sites and museums.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h2>2. Camera Permission</h2>
-<p>The App requests access to your device camera solely to allow you to capture images for analysis. We do not record video, stream camera feed, or access the camera in the background. Camera access is only active when you explicitly initiate a photo capture within the App.</p>
-
-<h2>3. How We Use Your Information</h2>
-<ul>
-  <li>Provide and improve the AI-powered image analysis service.</li>
-  <li>Authenticate users and manage accounts.</li>
-  <li>Process in-app purchases and manage credits.</li>
-  <li>Deliver text-to-speech audio narrations.</li>
-  <li>Diagnose technical issues and improve app performance.</li>
-</ul>
-
-<h2>4. Data Sharing</h2>
-<p>We do not sell your personal data. We share data only with:</p>
-<ul>
-  <li><strong>Google (Gemini API):</strong> images and prompts are sent to Google's Gemini API for AI analysis, subject to <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
-  <li><strong>Google Cloud:</strong> our infrastructure provider for hosting, storage, and text-to-speech services.</li>
-  <li><strong>Apple / Google Play:</strong> for in-app purchase verification.</li>
-</ul>
-
-<h2>5. Data Retention</h2>
-<p>Your images and analysis results are stored on our servers until you delete them from the App or delete your account. Account data is retained for as long as your account is active and deleted within 30 days of account deletion.</p>
-
-<h2>6. Your Rights</h2>
-<p>You may request access to, correction of, or deletion of your personal data at any time by contacting us at <a href="mailto:privacy@sightecho.app">privacy@sightecho.app</a>. You may also delete your account and all associated data directly from the App settings.</p>
-
-<h2>7. Children's Privacy</h2>
-<p>The App is not directed to children under 13. We do not knowingly collect personal information from children under 13.</p>
-
-<h2>8. Security</h2>
-<p>We use industry-standard security measures including HTTPS encryption, JWT authentication, and Google Cloud security infrastructure to protect your data.</p>
-
-<h2>9. Changes to This Policy</h2>
-<p>We may update this policy periodically. We will notify you of material changes through the App or by email. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
-
-<h2>10. Contact</h2>
-<p>If you have questions about this Privacy Policy, please contact us at:<br>
-<strong>SightEcho</strong><br>
-Email: <a href="mailto:admin@sightechoai.com">admin@sightechoai.com</a>
-</p>
+<footer>
+  <div class="container">
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
+    <a href="mailto:support@sightechoai.com">Contact</a>
+    <div class="copyright">© 2026 SightEcho. All rights reserved.</div>
+  </div>
+</footer>
 
 </body>
 </html>
