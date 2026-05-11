@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SightEcho — Account & Data Deletion</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #1a202c;
+      line-height: 1.65;
+      background: #ffffff;
+    }
+    h1 { font-size: 28px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+    h2 { font-size: 20px; margin-top: 32px; color: #2d3748; }
+    h3 { font-size: 16px; margin-top: 20px; color: #4a5568; }
+    p, li { color: #2d3748; }
+    code {
+      background: #edf2f7;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+    .meta { color: #718096; font-size: 14px; margin-top: -10px; }
+    .lang-switch { text-align: right; margin-bottom: 20px; color: #718096; font-size: 14px; }
+    .section { margin-bottom: 24px; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th, td { padding: 10px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+    th { background: #f7fafc; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<div class="lang-switch">한국어 · <a href="#english">English</a></div>
+
+<h1>SightEcho 계정 및 데이터 삭제 안내</h1>
+<p class="meta">앱 이름: SightEcho</p>
+
+<div class="section">
+  <h2>1. 앱 내에서 직접 삭제 (권장)</h2>
+  <ol>
+    <li>SightEcho 앱 실행 후 로그인</li>
+    <li>좌측 상단 메뉴(☰) → <strong>설정</strong> 진입</li>
+    <li>계정 섹션 하단의 <strong>"계정 삭제"</strong> 버튼 탭</li>
+    <li>확인 다이얼로그에서 다시 한 번 확인 → 즉시 삭제 처리</li>
+  </ol>
+  <p>이 방법은 가장 빠르고 안전합니다. 별도 인증 없이 본인 계정에서 즉시 처리됩니다.</p>
+</div>
+
+<div class="section">
+  <h2>2. 이메일로 삭제 요청</h2>
+  <p>앱 사용이 어려운 경우 다음 이메일로 요청해 주세요:</p>
+  <p><strong>support@sightechoai.com</strong></p>
+  <p>이메일에 다음 정보를 포함해 주세요:</p>
+  <ul>
+    <li>가입 시 사용한 이메일 주소</li>
+    <li>제목: "SightEcho 계정 삭제 요청"</li>
+    <li>(선택) 삭제 요청 사유</li>
+  </ul>
+  <p>본인 확인 후 영업일 기준 <strong>5일 이내</strong> 처리됩니다.</p>
+</div>
+
+<div class="section">
+  <h2>3. 삭제되는 데이터 및 보관 기간</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>데이터 유형</th>
+        <th>삭제 방식</th>
+        <th>보관 기간</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>계정 정보 (이메일, 비밀번호 해시, 사용자 ID)</td>
+        <td>완전 삭제</td>
+        <td>즉시</td>
+      </tr>
+      <tr>
+        <td>분석 결과 (사진, AI 텍스트, 오디오)</td>
+        <td>완전 삭제 (Cloud Storage 객체 포함)</td>
+        <td>즉시</td>
+      </tr>
+      <tr>
+        <td>여행 / Trip 데이터</td>
+        <td>완전 삭제</td>
+        <td>즉시</td>
+      </tr>
+      <tr>
+        <td>잔여 크레딧 잔액</td>
+        <td>소멸 (환불 불가)</td>
+        <td>즉시</td>
+      </tr>
+      <tr>
+        <td>구매 내역 (IAP 거래 기록)</td>
+        <td>익명화 후 보관</td>
+        <td><strong>최대 5년</strong> (전자상거래법 / 세무 의무)</td>
+      </tr>
+      <tr>
+        <td>접속 로그 (IP, 디바이스 정보)</td>
+        <td>익명화 후 보관</td>
+        <td>최대 3개월 (보안 / 부정 사용 방지)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="meta">법령에 따라 익명화 후 보관해야 하는 항목은 개인 식별 가능 정보가 제거된 형태로만 유지됩니다.</p>
+</div>
+
+<div class="section">
+  <h2>4. 일부 데이터만 삭제하기 (계정 유지)</h2>
+  <p>계정을 그대로 두고 특정 데이터만 삭제하실 수 있습니다.</p>
+  <h3>개별 분석 삭제</h3>
+  <ol>
+    <li>SightEcho 앱 실행</li>
+    <li>홈에서 삭제할 분석 카드 탭 → 상세 화면 진입</li>
+    <li>우측 상단 메뉴(⋯ 또는 휴지통 아이콘) → <strong>"삭제"</strong> 선택</li>
+    <li>확인 시 해당 분석의 사진 + AI 결과 + 오디오 모두 즉시 삭제</li>
+  </ol>
+  <h3>여행(Trip) 단위 삭제</h3>
+  <ol>
+    <li>홈에서 삭제할 여행 카드 우측 ⋯ 메뉴 탭</li>
+    <li><strong>"삭제"</strong> 선택 → 여행과 그 안의 모든 분석이 삭제됨</li>
+  </ol>
+  <h3>여행기(Story) 삭제</h3>
+  <ol>
+    <li>여행 상세 화면 → 생성된 여행기 카드 탭</li>
+    <li>여행기 뷰어 우측 상단 메뉴 → <strong>"삭제"</strong> 선택</li>
+  </ol>
+  <h3>이메일로 부분 삭제 요청</h3>
+  <p>앱에서 직접 삭제하기 어려운 항목이 있다면 <strong>support@sightechoai.com</strong> 으로 다음 정보를 보내주세요:</p>
+  <ul>
+    <li>가입 이메일</li>
+    <li>삭제하고 싶은 항목 (예: "2026년 5월에 만든 옥스퍼드 여행", "특정 사진 분석" 등)</li>
+  </ul>
+  <p>영업일 기준 5일 이내 처리됩니다.</p>
+</div>
+
+<div class="section">
+  <h2>5. 삭제 후 복구 불가</h2>
+  <p>모든 삭제는 <strong>되돌릴 수 없습니다.</strong> 삭제된 분석 결과, Trip 데이터, 잔여 크레딧은 복구할 수 없습니다. 신중히 결정해 주세요.</p>
+</div>
+
+<hr style="margin: 50px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+<a id="english"></a>
+<h1>SightEcho — Account &amp; Data Deletion</h1>
+<p class="meta">App: SightEcho</p>
+
+<div class="section">
+  <h2>1. Delete From Within the App (Recommended)</h2>
+  <ol>
+    <li>Open SightEcho and sign in</li>
+    <li>Tap the menu icon (☰) → <strong>Settings</strong></li>
+    <li>Under the Account section, tap <strong>"Delete Account"</strong></li>
+    <li>Confirm in the dialog → your account is deleted immediately</li>
+  </ol>
+</div>
+
+<div class="section">
+  <h2>2. Request Deletion by Email</h2>
+  <p>If you cannot access the app, email us at <strong>support@sightechoai.com</strong> with:</p>
+  <ul>
+    <li>The email address you used to sign up</li>
+    <li>Subject: "SightEcho Account Deletion Request"</li>
+    <li>(Optional) Reason for deletion</li>
+  </ul>
+  <p>After identity verification, your request will be processed within <strong>5 business days</strong>.</p>
+</div>
+
+<div class="section">
+  <h2>3. What is Deleted &amp; Retention</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Data Type</th>
+        <th>How Deleted</th>
+        <th>Retention</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Account info (email, password hash, user ID)</td>
+        <td>Permanently deleted</td>
+        <td>Immediate</td>
+      </tr>
+      <tr>
+        <td>Analysis results (photos, AI text, audio)</td>
+        <td>Permanently deleted (incl. Cloud Storage)</td>
+        <td>Immediate</td>
+      </tr>
+      <tr>
+        <td>Trip data</td>
+        <td>Permanently deleted</td>
+        <td>Immediate</td>
+      </tr>
+      <tr>
+        <td>Remaining credit balance</td>
+        <td>Forfeited (not refundable)</td>
+        <td>Immediate</td>
+      </tr>
+      <tr>
+        <td>Purchase records (IAP transactions)</td>
+        <td>Anonymized and retained</td>
+        <td><strong>Up to 5 years</strong> (tax / commerce law)</td>
+      </tr>
+      <tr>
+        <td>Access logs (IP, device info)</td>
+        <td>Anonymized and retained</td>
+        <td>Up to 3 months (security / abuse prevention)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section">
+  <h2>4. Delete Specific Data (Keep Account)</h2>
+  <p>You can delete specific items without deleting your account.</p>
+  <h3>Delete an individual analysis</h3>
+  <ol>
+    <li>Open SightEcho</li>
+    <li>Tap the analysis card → detail screen</li>
+    <li>Top-right menu (⋯ or trash icon) → <strong>"Delete"</strong></li>
+    <li>The photo, AI result, and audio are all removed immediately</li>
+  </ol>
+  <h3>Delete a Trip</h3>
+  <ol>
+    <li>On the home screen, tap the ⋯ menu on a Trip card</li>
+    <li>Select <strong>"Delete"</strong> — the Trip and all its analyses are removed</li>
+  </ol>
+  <h3>Delete a Story</h3>
+  <ol>
+    <li>In the Trip detail screen, tap the generated Story card</li>
+    <li>In the Story viewer, top-right menu → <strong>"Delete"</strong></li>
+  </ol>
+  <h3>Request partial deletion by email</h3>
+  <p>If specific items are hard to delete in-app, email <strong>support@sightechoai.com</strong> with:</p>
+  <ul>
+    <li>Your registered email</li>
+    <li>The items you'd like deleted (e.g., "the Oxford trip from May 2026", "specific photo analysis")</li>
+  </ul>
+  <p>Processed within 5 business days.</p>
+</div>
+
+<div class="section">
+  <h2>5. Deletion is Permanent</h2>
+  <p>All deletions <strong>cannot be undone.</strong> Deleted analysis results, Trip data, and remaining credits cannot be recovered.</p>
+</div>
+
+<p class="meta" style="margin-top: 50px; text-align: center;">
+  Last updated: May 10, 2026
+</p>
+
+</body>
+</html>
