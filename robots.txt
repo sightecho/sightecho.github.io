@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+# 민감/기능 페이지는 인덱싱 제외 (Codex 검증 2026-06-12 #6)
+Disallow: /reset-password
+Disallow: /reset-password.html
+Disallow: /account-deletion
+Disallow: /account-deletion.html
+
+Sitemap: https://sightechoai.com/sitemap.xml
