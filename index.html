@@ -107,11 +107,18 @@
     }
     .shots-row {
       display: flex;
+      align-items: flex-start;          /* level the card tops (no stretch) */
+      justify-content: center;          /* center the row when it fits on wide screens */
       gap: 18px;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       padding: 4px 24px 12px;
       -webkit-overflow-scrolling: touch;
+    }
+    /* On wide screens the centered row can't scroll-center; keep left-aligned start
+       so the first card isn't clipped when it overflows. */
+    @media (min-width: 1100px) {
+      .shots-row { justify-content: flex-start; }
     }
     .shots-row::-webkit-scrollbar { height: 6px; }
     .shots-row::-webkit-scrollbar-thumb { background: #e0d6cc; border-radius: 3px; }
@@ -258,34 +265,6 @@
     <img src="/screenshots/04-nearby.png" alt="What's worth seeing nearby — real spots with walk times" loading="lazy" />
     <img src="/screenshots/05-travelogue.png" alt="Your trip, written up — photos become a travelogue" loading="lazy" />
     <img src="/screenshots/06-language.png" alt="Kept for years, in your language — narration in 70+ languages" loading="lazy" />
-  </div>
-</section>
-
-<section class="features">
-  <div class="container">
-    <h2>What SightEcho does</h2>
-    <div class="feature-grid">
-      <div class="feature">
-        <div class="feature-icon">🎙️</div>
-        <h3>AI Docent</h3>
-        <p>One tap and an expert-style narration explains the place, art, food, or sign in your photo — read aloud, even with your screen off.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🗺️</div>
-        <h3>Trips &amp; Stories</h3>
-        <p>Photos group into trips automatically, and each trip becomes a travel story and a shareable recap card.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">💛</div>
-        <h3>Lifelong Memory</h3>
-        <p>Your trips are kept as a living archive. Revisit them a year — or ten years — later.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🌐</div>
-        <h3>Multi-language</h3>
-        <p>Narration and audio in many languages. Read or listen in the language you prefer.</p>
-      </div>
-    </div>
   </div>
 </section>
 
