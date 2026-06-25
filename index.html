@@ -108,17 +108,15 @@
     .shots-row {
       display: flex;
       align-items: flex-start;          /* level the card tops (no stretch) */
-      justify-content: center;          /* center the row when it fits on wide screens */
+      /* safe center: centers the row when all cards fit (wide screens), but
+         falls back to start-alignment when they overflow so the first card is
+         never clipped (and can scroll). */
+      justify-content: safe center;
       gap: 18px;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       padding: 4px 24px 12px;
       -webkit-overflow-scrolling: touch;
-    }
-    /* On wide screens the centered row can't scroll-center; keep left-aligned start
-       so the first card isn't clipped when it overflows. */
-    @media (min-width: 1100px) {
-      .shots-row { justify-content: flex-start; }
     }
     .shots-row::-webkit-scrollbar { height: 6px; }
     .shots-row::-webkit-scrollbar-thumb { background: #e0d6cc; border-radius: 3px; }
