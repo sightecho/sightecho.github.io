@@ -28,22 +28,22 @@
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       margin: 0;
-      color: #1a1a2e;
+      color: #2A2118;            /* ink */
       line-height: 1.6;
-      background: #fafafa;
+      background: #FBF8F2;       /* warm ivory — brand bg */
     }
     .container { max-width: 980px; margin: 0 auto; padding: 0 24px; }
 
     /* Header */
     header {
       padding: 24px 0;
-      border-bottom: 1px solid #eee;
-      background: #fff;
+      border-bottom: 1px solid #E7DFD0;   /* divider */
+      background: #FBF8F2;                 /* ivory — unified with body */
     }
     .header-inner { display: flex; justify-content: space-between; align-items: center; }
     /* Young Serif = single weight (400) — NO font-weight (faux-bold breaks it) */
-    .logo { font-family: 'Young Serif', serif; font-size: 24px; color: #E8703A; letter-spacing: 0; text-decoration: none; }
-    nav a { color: #555; text-decoration: none; margin-left: 24px; font-size: 14px; }
+    .logo { font-family: 'Young Serif', serif; font-size: 24px; color: #C85A28; letter-spacing: 0; text-decoration: none; }
+    nav a { color: #6B6253; text-decoration: none; margin-left: 24px; font-size: 14px; }
     nav a:hover { color: #E8703A; }
 
     /* Hero */
@@ -60,7 +60,7 @@
     }
     .hero p.lead {
       font-size: 18px;
-      color: #555;
+      color: #6B6253;            /* taupe */
       max-width: 620px;
       margin: 0 auto 36px;
     }
@@ -79,15 +79,15 @@
       gap: 8px;
       padding: 14px 22px;
       border-radius: 10px;
-      background: #1a1a2e;
+      background: #E8703A;       /* copper fill — primary CTA */
       color: #fff;
       text-decoration: none;
       font-size: 15px;
       font-weight: 600;
     }
-    .download-btn:hover { background: #2a2a4e; }
+    .download-btn:hover { background: #C85A28; }   /* copper-deep */
     .download-btn.disabled {
-      background: #c0c0c0;
+      background: #CFC3AE;       /* warm muted (coming-soon) */
       cursor: not-allowed;
       pointer-events: none;
     }
@@ -103,7 +103,7 @@
     .shots {
       padding: 56px 0 64px;
       background: #fff;
-      border-top: 1px solid #eee;
+      border-top: 1px solid #E7DFD0;
     }
     .shots h2 {
       text-align: center;
@@ -131,9 +131,9 @@
       width: 240px;
       height: auto;
       border-radius: 22px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+      box-shadow: 0 10px 30px rgba(42,33,24,0.12);   /* warm ink shadow */
       scroll-snap-align: center;
-      border: 1px solid #f0ece6;
+      border: 1px solid #E7DFD0;
     }
     @media (max-width: 600px) {
       .shots-row img { width: 200px; }
@@ -143,8 +143,8 @@
     .features {
       padding: 60px 0;
       background: #fff;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
+      border-top: 1px solid #E7DFD0;
+      border-bottom: 1px solid #E7DFD0;
     }
     .features h2 {
       text-align: center;
@@ -171,7 +171,7 @@
     }
     .feature p {
       font-size: 14px;
-      color: #666;
+      color: #6B6253;
       margin: 0;
     }
 
@@ -187,7 +187,7 @@
     }
     .seestory p {
       font-size: 16px;
-      color: #555;
+      color: #6B6253;
       max-width: 600px;
       margin: 0 auto 28px;
     }
@@ -203,22 +203,22 @@
       font-size: 15px;
       font-weight: 600;
     }
-    .seestory-btn:hover { background: #d4602e; }
+    .seestory-btn:hover { background: #C85A28; }
 
     /* Footer */
     footer {
       padding: 40px 0;
       text-align: center;
-      color: #888;
+      color: #A99F8C;
       font-size: 13px;
     }
     footer a {
-      color: #888;
+      color: #A99F8C;
       text-decoration: none;
       margin: 0 12px;
     }
-    footer a:hover { color: #E8703A; }
-    .copyright { margin-top: 16px; font-size: 12px; color: #aaa; }
+    footer a:hover { color: #C85A28; }
+    .copyright { margin-top: 16px; font-size: 12px; color: #B8AE9B; }
 
     @media (max-width: 600px) {
       .hero h1 { font-size: 32px; }
