@@ -93,6 +93,41 @@
       margin-left: 4px;
     }
 
+    /* Screenshots showcase */
+    .shots {
+      padding: 56px 0 64px;
+      background: #fff;
+      border-top: 1px solid #eee;
+    }
+    .shots h2 {
+      text-align: center;
+      font-size: 28px;
+      margin: 0 0 36px;
+      letter-spacing: -0.5px;
+    }
+    .shots-row {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 4px 24px 12px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .shots-row::-webkit-scrollbar { height: 6px; }
+    .shots-row::-webkit-scrollbar-thumb { background: #e0d6cc; border-radius: 3px; }
+    .shots-row img {
+      flex: 0 0 auto;
+      width: 240px;
+      height: auto;
+      border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+      scroll-snap-align: center;
+      border: 1px solid #f0ece6;
+    }
+    @media (max-width: 600px) {
+      .shots-row img { width: 200px; }
+    }
+
     /* Features */
     .features {
       padding: 60px 0;
@@ -211,6 +246,18 @@
         <span class="badge-soon">Coming Soon</span>
       </a>
     </div>
+  </div>
+</section>
+
+<section class="shots">
+  <h2>See it in action</h2>
+  <div class="shots-row">
+    <img src="/screenshots/01-identify.png" alt="What am I looking at? — snap a photo and hear what it is" loading="lazy" />
+    <img src="/screenshots/02-anything.png" alt="Point your camera at anything — landmarks, art, meals, signs" loading="lazy" />
+    <img src="/screenshots/03-listen.png" alt="Tap once, hear the full story — expert audio narration" loading="lazy" />
+    <img src="/screenshots/04-nearby.png" alt="What's worth seeing nearby — real spots with walk times" loading="lazy" />
+    <img src="/screenshots/05-travelogue.png" alt="Your trip, written up — photos become a travelogue" loading="lazy" />
+    <img src="/screenshots/06-language.png" alt="Kept for years, in your language — narration in 70+ languages" loading="lazy" />
   </div>
 </section>
 
