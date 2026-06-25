@@ -18,10 +18,15 @@
   <meta name="twitter:description" content="An AI docent explains and narrates your travel photos, then keeps them as a lifelong travel memory." />
   <meta name="twitter:image" content="https://sightechoai.com/og-cover.png" />
   <link rel="canonical" href="https://sightechoai.com/" />
+
+  <!-- Brand fonts: Young Serif (display) + Inter (body) — OFL, self-servable -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       margin: 0;
       color: #1a1a2e;
       line-height: 1.6;
@@ -36,7 +41,8 @@
       background: #fff;
     }
     .header-inner { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 22px; font-weight: 800; color: #E8703A; letter-spacing: -0.5px; text-decoration: none; }
+    /* Young Serif = single weight (400) — NO font-weight (faux-bold breaks it) */
+    .logo { font-family: 'Young Serif', serif; font-size: 24px; color: #E8703A; letter-spacing: 0; text-decoration: none; }
     nav a { color: #555; text-decoration: none; margin-left: 24px; font-size: 14px; }
     nav a:hover { color: #E8703A; }
 
@@ -46,11 +52,11 @@
       text-align: center;
     }
     .hero h1 {
-      font-size: 44px;
-      font-weight: 800;
-      letter-spacing: -1px;
+      font-family: 'Young Serif', serif;
+      font-size: 46px;
+      letter-spacing: -0.01em;
       margin: 0 0 16px;
-      line-height: 1.2;
+      line-height: 1.1;
     }
     .hero p.lead {
       font-size: 18px;
