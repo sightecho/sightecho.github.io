@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <title>Features — SightEcho</title>
+  <meta name="description" content="Everything SightEcho does: identify landmarks, art, food and signs from a photo, hear it narrated in your language, get safety help, discover what's nearby, track trip expenses, and turn your trip into a travel story — in 62 languages." />
+
+  <!-- Open Graph / Twitter (share previews) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SightEcho" />
+  <meta property="og:title" content="Features — SightEcho" />
+  <meta property="og:description" content="Identify anything from a photo, hear it narrated in your language, discover what's nearby, and turn your trip into a travel story." />
+  <meta property="og:url" content="https://sightechoai.com/features.html" />
+  <meta property="og:image" content="https://sightechoai.com/og-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Features — SightEcho" />
+  <meta name="twitter:description" content="Identify anything from a photo, hear it narrated in your language, and turn your trip into a travel story." />
+  <meta name="twitter:image" content="https://sightechoai.com/og-cover.png" />
+  <link rel="canonical" href="https://sightechoai.com/features.html" />
+
+  <!-- Brand fonts: Young Serif (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      margin: 0;
+      color: #2A2118;            /* ink */
+      line-height: 1.6;
+      background: #FBF8F2;       /* warm ivory — brand bg */
+    }
+    .container { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header { padding: 24px 0; border-bottom: 1px solid #E7DFD0; background: #FBF8F2; }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: 'Young Serif', serif; font-size: 24px; color: #C85A28; letter-spacing: 0; text-decoration: none; }
+    nav a { color: #6B6253; text-decoration: none; margin-left: 24px; font-size: 14px; }
+    nav a:hover { color: #E8703A; }
+    nav a.active { color: #C85A28; font-weight: 600; }
+
+    /* Hero */
+    .hero { padding: 72px 0 48px; text-align: center; }
+    .hero h1 { font-family: 'Young Serif', serif; font-size: 44px; letter-spacing: -0.01em; margin: 0 0 16px; line-height: 1.1; }
+    .hero p.lead { font-size: 18px; color: #6B6253; max-width: 640px; margin: 0 auto; }
+
+    /* Feature blocks (alternating) */
+    .block { padding: 56px 0; border-top: 1px solid #E7DFD0; }
+    .block:nth-child(even) { background: #fff; }
+    .block-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .block.reverse .block-text { order: 2; }
+    .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #C85A28; margin: 0 0 10px; }
+    .block h2 { font-family: 'Young Serif', serif; font-size: 28px; letter-spacing: -0.01em; margin: 0 0 14px; line-height: 1.2; }
+    .block p { font-size: 16px; color: #4A4031; margin: 0 0 14px; }
+    .block ul { margin: 0; padding: 0; list-style: none; }
+    .block li { font-size: 15px; color: #4A4031; padding: 6px 0 6px 26px; position: relative; }
+    .block li::before { content: "→"; position: absolute; left: 0; color: #E8703A; font-weight: 700; }
+    .block a.inline { color: #C85A28; text-decoration: none; }
+    .block a.inline:hover { text-decoration: underline; }
+
+    /* Illustrative panel (no screenshot dependency) */
+    .panel { background: linear-gradient(160deg, #FFF6EC 0%, #F7ECDC 100%); border: 1px solid #E7DFD0; border-radius: 22px; padding: 28px; box-shadow: 0 10px 30px rgba(42,33,24,0.08); }
+    .panel .panel-icon { font-size: 40px; margin-bottom: 14px; }
+    .panel .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { display: inline-block; background: #fff; border: 1px solid #E7DFD0; color: #6B6253; font-size: 13px; padding: 7px 12px; border-radius: 999px; }
+    .panel .quote { font-size: 15px; color: #4A4031; line-height: 1.7; }
+    .panel .quote strong { color: #C85A28; }
+    .tier-card { background: #fff; border: 1px solid #E7DFD0; border-radius: 14px; padding: 16px 18px; margin-bottom: 12px; }
+    .tier-card:last-child { margin-bottom: 0; }
+    .tier-card h4 { margin: 0 0 4px; font-size: 15px; color: #2A2118; }
+    .tier-card p { margin: 0; font-size: 13px; color: #6B6253; }
+
+    /* "Everything else" grid */
+    .more { padding: 64px 0; border-top: 1px solid #E7DFD0; background: #fff; }
+    .more h2 { font-family: 'Young Serif', serif; text-align: center; font-size: 30px; margin: 0 0 8px; letter-spacing: -0.01em; }
+    .more .sub { text-align: center; color: #6B6253; font-size: 16px; margin: 0 auto 40px; max-width: 560px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
+    .card { padding: 4px; }
+    .card .ic { font-size: 30px; margin-bottom: 10px; }
+    .card h3 { font-size: 16px; margin: 0 0 6px; }
+    .card p { font-size: 14px; color: #6B6253; margin: 0; }
+
+    /* Languages strip */
+    .lang-band { padding: 64px 0; text-align: center; border-top: 1px solid #E7DFD0; }
+    .lang-band h2 { font-family: 'Young Serif', serif; font-size: 30px; margin: 0 0 12px; letter-spacing: -0.01em; }
+    .lang-band p { font-size: 16px; color: #6B6253; max-width: 640px; margin: 0 auto 28px; }
+    .lang-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; max-width: 760px; margin: 0 auto; }
+    .lang-chips .chip { background: #FBF8F2; }
+
+    /* CTA */
+    .cta { padding: 72px 0; text-align: center; background: #fff; border-top: 1px solid #E7DFD0; }
+    .cta h2 { font-family: 'Young Serif', serif; font-size: 30px; margin: 0 0 24px; letter-spacing: -0.01em; }
+    .download-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .download-btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 22px; border-radius: 10px; background: #E8703A; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; }
+    .download-btn:hover { background: #C85A28; }
+    .download-btn.disabled { background: #CFC3AE; cursor: not-allowed; pointer-events: none; }
+    .badge-soon { font-size: 11px; background: rgba(255,255,255,0.2); padding: 2px 6px; border-radius: 4px; margin-left: 4px; }
+
+    /* Footer */
+    footer { padding: 40px 0; text-align: center; color: #A99F8C; font-size: 13px; }
+    footer a { color: #A99F8C; text-decoration: none; margin: 0 12px; }
+    footer a:hover { color: #C85A28; }
+    .copyright { margin-top: 16px; font-size: 12px; color: #B8AE9B; }
+
+    @media (max-width: 760px) {
+      .block-inner { grid-template-columns: 1fr; gap: 24px; }
+      .block.reverse .block-text { order: 0; }
+      .hero h1 { font-size: 32px; }
+      .hero p.lead { font-size: 16px; }
+      nav a { margin-left: 12px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a class="logo" href="/">SightEcho</a>
+    <nav>
+      <a href="/features.html" class="active">Features</a>
+      <a href="https://www.see-story.com" target="_blank" rel="noopener">Stories</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Your AI travel docent,<br/>from photo to story.</h1>
+    <p class="lead">Point your camera at anything on a trip — a monument, a painting, a dish, a street sign — and SightEcho tells you what it is and why it matters, out loud, in your language. It helps in emergencies, finds what's worth seeing nearby, tracks your spending, and turns the whole journey into a travel story you keep for years.</p>
+  </div>
+</section>
+
+<!-- 1. Identify -->
+<section class="block">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">Point &amp; identify</p>
+      <h2>Snap a photo. Know what you're looking at.</h2>
+      <p>SightEcho reads the photo and explains the subject in plain, expert language — no typing, no searching. Pick the mode that fits the moment.</p>
+      <ul>
+        <li>Travel — landmarks, art, sculpture, architecture</li>
+        <li>Meal — dishes &amp; local food: what it is, how it's eaten</li>
+        <li>Sign — signs, menus, tickets &amp; notices, read in your language</li>
+        <li>Switch a photo between modes anytime</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">📸</div>
+      <div class="chip-row">
+        <span class="chip">Landmarks</span>
+        <span class="chip">Art</span>
+        <span class="chip">Food</span>
+        <span class="chip">Signs &amp; menus</span>
+        <span class="chip">Architecture</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Safety Helper -->
+<section class="block reverse">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">When something goes wrong</p>
+      <h2>A safety helper for the moments that matter.</h2>
+      <p>Trouble on the road is stressful in a place you don't know. Pick what's happening and SightEcho walks you through it — clearly, and free.</p>
+      <ul>
+        <li>Scenarios: theft, accident, medical, lost, and more</li>
+        <li>Step-by-step what to do, right now</li>
+        <li>Key local phrases to say or show</li>
+        <li>Nearby help — facilities and contacts</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">🆘</div>
+      <div class="chip-row">
+        <span class="chip">Theft</span>
+        <span class="chip">Accident</span>
+        <span class="chip">Medical</span>
+        <span class="chip">Lost</span>
+        <span class="chip">Always free</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Listen -->
+<section class="block">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">Hear it</p>
+      <h2>Tap once — hear the whole story.</h2>
+      <p>Every explanation can be read or narrated as natural, spoken audio. Put the phone in your pocket and keep walking — narration keeps playing.</p>
+      <ul>
+        <li>Lifelike audio narration in your language</li>
+        <li>Plays in the background &amp; on the lock screen</li>
+        <li>Control from Control Center &amp; headphone buttons</li>
+        <li>Listen again anytime — replays are free</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">🎧</div>
+      <p class="quote">“This is the <strong>Sagrada Família</strong>, Gaudí's unfinished basilica begun in 1882. The towers you're looking at represent…”</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Depth -->
+<section class="block reverse">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">Tuned to you</p>
+      <h2>A quick answer, or a full docent tour.</h2>
+      <p>Some moments need a one-line answer. Others deserve the deep dive. Set your preferences once and every explanation arrives at the right depth.</p>
+      <ul>
+        <li>Choose your knowledge level &amp; how deep to go</li>
+        <li>Tell it you're on-site, on the move, or reliving later</li>
+        <li>Preferences are remembered across trips</li>
+      </ul>
+    </div>
+    <div>
+      <div class="tier-card">
+        <h4>SightEcho — the quick read</h4>
+        <p>A clear, concise explanation of what you're seeing. Perfect while you're on the move.</p>
+      </div>
+      <div class="tier-card">
+        <h4>InsightEcho — the docent deep-dive</h4>
+        <p>History, context, and the details a great museum guide would add — for the full story.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Nearby -->
+<section class="block">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">Around you</p>
+      <h2>Discover what's worth seeing nearby.</h2>
+      <p>SightEcho uses where you are to suggest real places around you — with walking times, so you know what's actually reachable on foot.</p>
+      <ul>
+        <li>Nearby attractions worth a detour</li>
+        <li>Nearby restaurants &amp; local food</li>
+        <li>Walking distance &amp; time for each</li>
+        <li>Verified hours &amp; details, one tap to directions</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">🧭</div>
+      <div class="chip-row">
+        <span class="chip">Museum · 4 min walk</span>
+        <span class="chip">Viewpoint · 9 min</span>
+        <span class="chip">Café · 2 min</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Trips → Story -->
+<section class="block reverse">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">From trip to travelogue</p>
+      <h2>Your photos become a travel story.</h2>
+      <p>SightEcho organizes the places you captured into trips. When a trip ends, it writes the whole journey up as a travel story — from your own photos, in the style you choose.</p>
+      <ul>
+        <li>Group photos into named trips, with a timeline</li>
+        <li>Generate a story in three styles: Travelogue, Guidebook, or Instagram</li>
+        <li>Regenerate or edit until it's right</li>
+        <li>Revisit any trip — kept for years, not lost in the camera roll</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">📖</div>
+      <p class="quote">“<strong>Day 2 — Barcelona.</strong> The morning began in the Gothic Quarter, where narrow lanes opened onto…”</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Share / community -->
+<section class="block">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">Share it</p>
+      <h2>Publish your journey on see-story.</h2>
+      <p>Turn a finished trip into a story worth sharing and publish it to <a class="inline" href="https://www.see-story.com" target="_blank" rel="noopener">see-story</a> — a community where travelers discover each other's journeys.</p>
+      <ul>
+        <li>Choose private, unlisted, or public for every story</li>
+        <li>Share a single discovery with a link</li>
+        <li>Writers can bring their own blog so stories sound like them</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">🌍</div>
+      <div class="chip-row">
+        <span class="chip">Private</span>
+        <span class="chip">Unlisted</span>
+        <span class="chip">Public</span>
+        <span class="chip">Your voice</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Credits / earning -->
+<section class="block reverse">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">Credits</p>
+      <h2>Start free. Top up only if you want to.</h2>
+      <p>New accounts begin with free credits. Earn more as you go, or buy a pack when you need it — your choice.</p>
+      <ul>
+        <li>Free credits when you sign up</li>
+        <li>Watch a short ad to earn a credit</li>
+        <li>Invite friends with your referral code — you both get credits</li>
+        <li>Credit packs available when you want more</li>
+      </ul>
+      <p style="margin-top:6px;"><a class="inline" href="/pricing.html">See how credits work →</a></p>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">✨</div>
+      <div class="chip-row">
+        <span class="chip">Signup bonus</span>
+        <span class="chip">Earn by ad</span>
+        <span class="chip">Referrals</span>
+        <span class="chip">Credit packs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Everything else grid -->
+<section class="more">
+  <div class="container">
+    <h2>And there's more in the app</h2>
+    <p class="sub">Small touches that make a whole trip easier to capture, remember, and manage.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="ic">💸</div>
+        <h3>Trip expense tracking</h3>
+        <p>Log meals, transport, lodging and more by category, with currency conversion — and export to CSV.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🗓️</div>
+        <h3>Year in Travel</h3>
+        <p>An annual recap of where you went and your traveler type — a shareable card to look back on.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🔔</div>
+        <h3>On-this-day reminders</h3>
+        <p>Optional gentle nudges that resurface a past trip and your yearly recap when it's ready.</p>
+      </div>
+      <div class="card">
+        <div class="ic">⚡</div>
+        <h3>Live analysis status</h3>
+        <p>Watch results come together in real time — no refreshing, no guessing.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🗂️</div>
+        <h3>Organize anytime</h3>
+        <p>Rename trips and move any photo to a different trip whenever you like.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🌐</div>
+        <h3>62 languages</h3>
+        <p>Analysis and audio in the language you choose, set on first launch and changeable anytime.</p>
+      </div>
+      <div class="card">
+        <div class="ic">💱</div>
+        <h3>Your home currency</h3>
+        <p>See trip spending converted to the currency you actually think in.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🔐</div>
+        <h3>Secure account</h3>
+        <p>Email sign-in with secure token storage, password reset, and change-password built in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Languages -->
+<section class="lang-band">
+  <div class="container">
+    <h2>62 languages — analysis and audio, in yours.</h2>
+    <p>Pick your language once. Every explanation is written and narrated in it — with regional accents where it counts (US, UK, Australian &amp; Indian English; European &amp; Latin American Spanish; Brazilian &amp; European Portuguese; French from France &amp; Canada).</p>
+    <div class="lang-chips">
+      <span class="chip">English</span><span class="chip">한국어</span><span class="chip">日本語</span>
+      <span class="chip">中文</span><span class="chip">Español</span><span class="chip">Français</span>
+      <span class="chip">Deutsch</span><span class="chip">Português</span><span class="chip">Italiano</span>
+      <span class="chip">العربية</span><span class="chip">हिन्दी</span><span class="chip">Русский</span>
+      <span class="chip">ภาษาไทย</span><span class="chip">Tiếng Việt</span><span class="chip">Bahasa</span>
+      <span class="chip">+ 47 more</span>
+    </div>
+  </div>
+</section>
+
+<!-- Privacy -->
+<section class="block">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">Yours to keep</p>
+      <h2>Built around your trips, not your data.</h2>
+      <p>Your photos and stories stay tied to your account. Camera and location are used only to do their job — identify what's in front of you and find what's nearby — and nothing publishes until you choose to share it.</p>
+      <ul>
+        <li>Stories stay private until you publish</li>
+        <li>Location used only for nearby suggestions</li>
+        <li><a class="inline" href="/account-deletion.html">Delete your account &amp; data</a> anytime</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">🔒</div>
+      <div class="chip-row">
+        <span class="chip">Private by default</span>
+        <span class="chip">You publish</span>
+        <span class="chip">Delete anytime</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>Start exploring with SightEcho.</h2>
+    <div class="download-row">
+      <a class="download-btn" href="https://apps.apple.com/app/id6764697758" target="_blank" rel="noopener">
+        Download on the App Store
+      </a>
+      <a class="download-btn disabled" href="https://play.google.com/store/apps/details?id=com.sightecho.app" target="_blank" rel="noopener">
+        Get it on Google Play
+        <span class="badge-soon">Coming Soon</span>
+      </a>
+    </div>
+    <p style="margin-top:18px;font-size:14px;color:#6B6253;">New accounts start with free credits. See <a href="/pricing.html" style="color:#C85A28;">how credits work</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <a href="/features.html">Features</a>
+    <a href="https://www.see-story.com" target="_blank" rel="noopener">see-story</a>
+    <a href="/pricing.html">Pricing</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
+    <a href="/support.html">Support</a>
+    <a href="/account-deletion.html">Delete Account</a>
+    <div class="copyright">© 2026 SightEcho. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
