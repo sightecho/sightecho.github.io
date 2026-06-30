@@ -271,6 +271,20 @@
       linear-gradient(180deg, rgba(16,10,5,0.42) 0%, rgba(16,10,5,0.46) 48%, rgba(16,10,5,0.62) 100%); }
     .hero .halo span { width: 92vw; height: 360px; }
   }
+  
+  /* === How it works strip (added 2026-06-30) === */
+  .how { background: #FBF8F2; padding: 56px 0 12px; }
+  .how h2 { text-align: center; font-family: 'Young Serif', serif; font-size: 26px; letter-spacing: -0.4px; margin: 0 0 34px; color: #2A2118; }
+  .how-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 840px; margin: 0 auto; }
+  .how-step { text-align: center; padding: 0 6px; }
+  .how-ic { display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 16px; background: rgba(200,90,40,0.10); color: #C85A28; margin-bottom: 16px; }
+  .how-ic svg { width: 28px; height: 28px; }
+  .how-step h3 { font-size: 17px; margin: 0 0 6px; color: #2A2118; }
+  .how-step p { font-size: 14px; color: #6B6253; margin: 0; line-height: 1.55; }
+  @media (max-width: 640px) {
+    .how { padding: 44px 0 8px; }
+    .how-row { grid-template-columns: 1fr; gap: 24px; max-width: 380px; }
+  }
   </style>
 </head>
 <body>
@@ -308,6 +322,29 @@
         Get it on Google Play
         <span class="badge-soon">Coming Soon</span>
       </a>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="container">
+    <h2>How it works</h2>
+    <div class="how-row">
+      <div class="how-step">
+        <span class="how-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z" /> <circle cx="12" cy="13" r="3" /></svg></span>
+        <h3>Snap a photo</h3>
+        <p>Point your camera at a landmark, a dish, a sign, or a work of art.</p>
+      </div>
+      <div class="how-step">
+        <span class="how-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" /></svg></span>
+        <h3>Hear the story</h3>
+        <p>Tap once and listen, out loud, in your language.</p>
+      </div>
+      <div class="how-step">
+        <span class="how-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14" /> <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></svg></span>
+        <h3>Keep the trip</h3>
+        <p>Your photos become a travel story you revisit for years.</p>
+      </div>
     </div>
   </div>
 </section>
