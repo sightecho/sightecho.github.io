@@ -68,7 +68,7 @@
     .block:nth-child(even) { background: #fff; }
     .block-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
     .block.reverse .block-text { order: 2; }
-    .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #C85A28; margin: 0 0 10px; }
+    .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0; color: #C85A28; margin: 0 0 10px; }
     .block h2 { font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Segoe UI', sans-serif; font-size: 26px; font-weight: 800; letter-spacing: -0.03em; margin: 0 0 14px; line-height: 1.3; word-break: keep-all; overflow-wrap: break-word; }
     .block p { font-size: 16px; color: #4A4031; margin: 0 0 14px; }
     .block ul { margin: 0; padding: 0; list-style: none; }
@@ -78,8 +78,12 @@
     .block a.inline:hover { text-decoration: underline; }
 
     /* Illustrative panel */
-    .panel { background: linear-gradient(160deg, #FFF6EC 0%, #F7ECDC 100%); border: 1px solid #E7DFD0; border-radius: 22px; padding: 28px; box-shadow: 0 10px 30px rgba(42,33,24,0.08); }
-    .panel .panel-icon { font-size: 40px; margin-bottom: 14px; }
+    .panel { background: #FFFDFA; border: 1px solid #EAE1D2; border-radius: 16px; padding: 26px; position: relative; overflow: hidden; }
+    .panel .ic-tile { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 14px; background: rgba(200,90,40,0.10); color: #C85A28; margin-bottom: 18px; }
+    .panel .ic-tile svg { width: 26px; height: 26px; }
+    .panel .ic-wm { position: absolute; right: -14px; bottom: -20px; color: #C85A28; opacity: 0.08; pointer-events: none; }
+    .panel .ic-wm svg { width: 146px; height: 146px; }
+    .panel .chip-row, .panel .quote { position: relative; z-index: 1; }
     .panel .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
     .chip { display: inline-block; background: #fff; border: 1px solid #E7DFD0; color: #6B6253; font-size: 13px; padding: 7px 12px; border-radius: 999px; }
     .panel .quote { font-size: 15px; color: #4A4031; line-height: 1.7; }
@@ -95,7 +99,8 @@
     .more .sub { text-align: center; color: #6B6253; font-size: 16px; margin: 0 auto 40px; max-width: 560px; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
     .card { padding: 4px; }
-    .card .ic { font-size: 30px; margin-bottom: 10px; }
+    .card .ic-tile { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: rgba(200,90,40,0.10); color: #C85A28; margin-bottom: 12px; }
+    .card .ic-tile svg { width: 22px; height: 22px; }
     .card h3 { font-size: 16px; margin: 0 0 6px; }
     .card p { font-size: 14px; color: #6B6253; margin: 0; }
 
@@ -116,10 +121,10 @@
     .badge-soon { font-size: 11px; background: rgba(255,255,255,0.2); padding: 2px 6px; border-radius: 4px; margin-left: 4px; }
 
     /* Footer */
-    footer { padding: 40px 0; text-align: center; color: #A99F8C; font-size: 13px; }
-    footer a { color: #A99F8C; text-decoration: none; margin: 0 12px; }
+    footer { padding: 40px 0; text-align: center; color: #6B6253; font-size: 13px; }
+    footer a { color: #6B6253; text-decoration: none; margin: 0 12px; }
     footer a:hover { color: #C85A28; }
-    .copyright { margin-top: 16px; font-size: 12px; color: #B8AE9B; }
+    .copyright { margin-top: 16px; font-size: 12px; color: #7C7060; }
 
     @media (max-width: 760px) {
       .block-inner { grid-template-columns: 1fr; gap: 24px; }
@@ -183,7 +188,7 @@
       </ul>
     </div>
     <div class="panel">
-      <div class="panel-icon">🏛️</div>
+      <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 18v-7" /> <path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" /> <path d="M14 18v-7" /> <path d="M18 18v-7" /> <path d="M3 22h18" /> <path d="M6 18v-7" /></svg></span><span class="ic-wm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 18v-7" /> <path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" /> <path d="M14 18v-7" /> <path d="M18 18v-7" /> <path d="M3 22h18" /> <path d="M6 18v-7" /></svg></span>
       <div class="chip-row">
         <span class="chip">광장</span>
         <span class="chip">성당</span>
@@ -210,7 +215,7 @@
       </ul>
     </div>
     <div class="panel">
-      <div class="panel-icon">🎨</div>
+      <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" /> <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" /> <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" /> <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" /> <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" /></svg></span><span class="ic-wm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" /> <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" /> <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" /> <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" /> <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" /></svg></span>
       <p class="quote">“이 작품은 빛과 색의 대비를 통해 당시 도시의 분위기를 보여줍니다. 가까이 보면 붓질의 방향이…”</p>
     </div>
   </div>
@@ -231,7 +236,7 @@
       </ul>
     </div>
     <div class="panel">
-      <div class="panel-icon">🍜</div>
+      <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z" /> <path d="M7 21h10" /> <path d="M19.5 12 22 6" /> <path d="M16.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.73 1.62" /> <path d="M11.25 3c.27.1.8.53.74 1.36-.05.83-.93 1.2-.98 2.02-.06.78.33 1.24.72 1.62" /> <path d="M6.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.74 1.62" /></svg></span><span class="ic-wm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z" /> <path d="M7 21h10" /> <path d="M19.5 12 22 6" /> <path d="M16.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.73 1.62" /> <path d="M11.25 3c.27.1.8.53.74 1.36-.05.83-.93 1.2-.98 2.02-.06.78.33 1.24.72 1.62" /> <path d="M6.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.74 1.62" /></svg></span>
       <div class="chip-row">
         <span class="chip">음식 이름</span>
         <span class="chip">재료</span>
@@ -257,7 +262,7 @@
       </ul>
     </div>
     <div class="panel">
-      <div class="panel-icon">🪧</div>
+      <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 13v8" /> <path d="M12 3v3" /> <path d="M2.354 10.354a1.207 1.207 0 0 1 0-1.708l2.06-2.06A2 2 0 0 1 5.828 6h12.344a2 2 0 0 1 1.414.586l2.06 2.06a1.207 1.207 0 0 1 0 1.708l-2.06 2.06a2 2 0 0 1-1.414.586H5.828a2 2 0 0 1-1.414-.586z" /></svg></span><span class="ic-wm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 13v8" /> <path d="M12 3v3" /> <path d="M2.354 10.354a1.207 1.207 0 0 1 0-1.708l2.06-2.06A2 2 0 0 1 5.828 6h12.344a2 2 0 0 1 1.414.586l2.06 2.06a1.207 1.207 0 0 1 0 1.708l-2.06 2.06a2 2 0 0 1-1.414.586H5.828a2 2 0 0 1-1.414-.586z" /></svg></span>
       <div class="chip-row">
         <span class="chip">표지판</span>
         <span class="chip">메뉴</span>
@@ -283,7 +288,7 @@
       </ul>
     </div>
     <div class="panel">
-      <div class="panel-icon">🆘</div>
+      <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m4.93 4.93 4.24 4.24" /> <path d="m14.83 9.17 4.24-4.24" /> <path d="m14.83 14.83 4.24 4.24" /> <path d="m9.17 14.83-4.24 4.24" /> <circle cx="12" cy="12" r="4" /></svg></span><span class="ic-wm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m4.93 4.93 4.24 4.24" /> <path d="m14.83 9.17 4.24-4.24" /> <path d="m14.83 14.83 4.24 4.24" /> <path d="m9.17 14.83-4.24 4.24" /> <circle cx="12" cy="12" r="4" /></svg></span>
       <div class="chip-row">
         <span class="chip">도난</span>
         <span class="chip">사고</span>
@@ -310,7 +315,7 @@
       </ul>
     </div>
     <div class="panel">
-      <div class="panel-icon">🎧</div>
+      <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" /></svg></span><span class="ic-wm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" /></svg></span>
       <p class="quote">“이곳은 <strong>사그라다 파밀리아</strong>입니다. 1882년에 착공된 가우디의 미완성 대성당으로, 지금 보고 있는 탑들은…”</p>
     </div>
   </div>
@@ -357,7 +362,7 @@
       </ul>
     </div>
     <div class="panel">
-      <div class="panel-icon">🧭</div>
+      <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" /></svg></span><span class="ic-wm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" /></svg></span>
       <div class="chip-row">
         <span class="chip">박물관 · 도보 4분</span>
         <span class="chip">전망대 · 9분</span>
@@ -382,7 +387,7 @@
       </ul>
     </div>
     <div class="panel">
-      <div class="panel-icon">📖</div>
+      <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14" /> <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></svg></span><span class="ic-wm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14" /> <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></svg></span>
       <p class="quote">“<strong>둘째 날 — 바르셀로나.</strong> 아침은 고딕 지구에서 시작됐다. 좁은 골목이 이내…”</p>
     </div>
   </div>
@@ -402,7 +407,7 @@
       </ul>
     </div>
     <div class="panel">
-      <div class="panel-icon">🌍</div>
+      <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3" /> <circle cx="6" cy="12" r="3" /> <circle cx="18" cy="19" r="3" /> <line x1="8.59" x2="15.42" y1="13.51" y2="17.49" /> <line x1="15.41" x2="8.59" y1="6.51" y2="10.49" /></svg></span><span class="ic-wm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3" /> <circle cx="6" cy="12" r="3" /> <circle cx="18" cy="19" r="3" /> <line x1="8.59" x2="15.42" y1="13.51" y2="17.49" /> <line x1="15.41" x2="8.59" y1="6.51" y2="10.49" /></svg></span>
       <div class="chip-row">
         <span class="chip">비공개</span>
         <span class="chip">링크 공개</span>
@@ -429,7 +434,7 @@
       <p style="margin-top:6px;"><a class="inline" href="/ko/pricing.html">크레딧이 어떻게 쓰이는지 보기 →</a></p>
     </div>
     <div class="panel">
-      <div class="panel-icon">✨</div>
+      <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" /> <path d="M20 2v4" /> <path d="M22 4h-4" /> <circle cx="4" cy="20" r="2" /></svg></span><span class="ic-wm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" /> <path d="M20 2v4" /> <path d="M22 4h-4" /> <circle cx="4" cy="20" r="2" /></svg></span>
       <div class="chip-row">
         <span class="chip">가입 보너스</span>
         <span class="chip">광고로 적립</span>
@@ -447,27 +452,27 @@
     <p class="sub">여행 중 기록하고, 돌아와서 정리하고, 나중에 다시 꺼내 보기까지. 작은 기능들도 여행 흐름에 맞췄습니다.</p>
     <div class="grid">
       <div class="card">
-        <div class="ic">💸</div>
+        <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" /> <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" /></svg></span>
         <h3>여행 경비 기록</h3>
         <p>식사·교통·숙박비를 항목별로 기록하고, 환율 환산과 CSV 내보내기까지 지원합니다.</p>
       </div>
       <div class="card">
-        <div class="ic">🗂️</div>
+        <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2" /></svg></span>
         <h3>언제든 정리</h3>
         <p>여행 이름을 바꾸거나 사진을 다른 여행으로 옮길 수 있습니다.</p>
       </div>
       <div class="card">
-        <div class="ic">🌐</div>
+        <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6" /> <path d="m4 14 6-6 2-3" /> <path d="M2 5h12" /> <path d="M7 2h1" /> <path d="m22 22-5-10-5 10" /> <path d="M14 18h6" /></svg></span>
         <h3>62개 언어</h3>
         <p>분석과 음성을 원하는 언어로 사용할 수 있습니다. 언제든 변경할 수 있습니다.</p>
       </div>
       <div class="card">
-        <div class="ic">💱</div>
+        <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.744 17.736a6 6 0 1 1-7.48-7.48" /> <path d="M15 6h1v4" /> <path d="m6.134 14.768.866-.5 2 3.464" /> <circle cx="16" cy="8" r="6" /></svg></span>
         <h3>나의 기준 통화</h3>
         <p>여행 지출을 실제로 쓰는 기준 통화로 환산해 보여줍니다.</p>
       </div>
       <div class="card">
-        <div class="ic">🔐</div>
+        <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /></svg></span>
         <h3>안전한 계정</h3>
         <p>이메일 로그인, 안전한 토큰 저장, 비밀번호 재설정·변경 기본 제공.</p>
       </div>
@@ -505,7 +510,7 @@
       </ul>
     </div>
     <div class="panel">
-      <div class="panel-icon">🔒</div>
+      <span class="ic-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /></svg></span><span class="ic-wm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /></svg></span>
       <div class="chip-row">
         <span class="chip">기본 비공개</span>
         <span class="chip">공개는 직접 선택</span>
