@@ -6,7 +6,7 @@
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <title>기능 — SightEcho</title>
-  <meta name="description" content="SightEcho는 여행 중 궁금한 장면을 사진으로 확인하고 음성으로 들을 수 있는 AI 여행 가이드입니다. 주변 추천, 긴급 상황 도움, 경비 기록, 여행 스토리 정리까지 지원합니다." />
+  <meta name="description" content="SightEcho는 여행 중 궁금한 풍경, 예술품, 음식, 표지판을 사진으로 확인하고 한국어 음성으로 들을 수 있는 AI 여행 가이드입니다. 주변 추천, 긴급 상황 도움, 경비 기록, 여행 스토리 정리까지 지원합니다." />
 
   <!-- Open Graph / Twitter (share previews) -->
   <meta property="og:type" content="website" />
@@ -153,39 +153,112 @@
 <section class="hero">
   <div class="container">
     <h1>여행지에서 궁금한 순간마다<br/>SightEcho를 열어보세요.</h1>
-    <p class="lead">처음 보는 건물, 미술관의 작품, 현지 음식, 낯선 표지판까지. 사진을 찍으면 SightEcho가 맥락을 설명하고, 필요한 정보는 음성으로 들려줍니다. 기록하고 싶은 순간은 여행 스토리로 이어집니다.</p>
+    <p class="lead">처음 보는 풍경, 미술관의 작품, 현지 음식, 낯선 표지판까지. 상황에 맞는 모드를 고르고 사진을 찍으면 SightEcho가 여행자가 이해하기 쉬운 말로 풀어줍니다.</p>
   </div>
 </section>
 
-<!-- 1. Identify -->
+<!-- 1. Scenery mode -->
 <section class="block">
   <div class="container block-inner">
     <div class="block-text">
-      <p class="eyebrow">사진으로 알아보기</p>
-      <h2>이게 뭐지? 싶을 때, 사진으로 바로 확인하세요.</h2>
-      <p>검색어를 몰라도 괜찮습니다. 사진을 찍으면 SightEcho가 장면을 읽고 여행자가 이해하기 쉬운 말로 설명합니다.</p>
+      <p class="eyebrow">풍경 모드</p>
+      <h2>처음 보는 풍경도 사진으로 쉽게 이해하세요.</h2>
+      <p>광장, 성당, 다리, 전망대처럼 여행 중 마주치는 장면을 사진으로 찍으면 장소의 이름과 배경, 눈여겨볼 포인트를 정리해 줍니다.</p>
       <ul>
-        <li>랜드마크, 예술 작품, 조각, 건축물</li>
-        <li>현지 음식의 이름과 먹는 방법</li>
-        <li>표지판·메뉴·티켓·안내문 번역과 설명</li>
-        <li>같은 사진을 다른 모드로 다시 분석</li>
+        <li>랜드마크, 자연 풍경, 거리 장면, 건축물</li>
+        <li>사진 속 장소가 무엇인지 먼저 확인</li>
+        <li>역사, 배경, 여행자가 보면 좋은 포인트 설명</li>
+        <li>짧게 확인하거나 더 깊게 들을 수 있는 해설</li>
       </ul>
     </div>
     <div class="panel">
-      <div class="panel-icon">📸</div>
+      <div class="panel-icon">🏛️</div>
       <div class="chip-row">
-        <span class="chip">랜드마크</span>
-        <span class="chip">예술</span>
-        <span class="chip">음식</span>
-        <span class="chip">표지판 · 메뉴</span>
-        <span class="chip">건축</span>
+        <span class="chip">광장</span>
+        <span class="chip">성당</span>
+        <span class="chip">전망대</span>
+        <span class="chip">거리 풍경</span>
+        <span class="chip">건축물</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 2. Safety Helper -->
+<!-- 2. Artwork mode -->
 <section class="block reverse">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">예술품 모드</p>
+      <h2>작품 앞에서 궁금한 점을 바로 들어보세요.</h2>
+      <p>미술관이나 거리에서 만난 그림, 조각, 설치 작품을 사진으로 찍으면 작품의 맥락과 작가, 시대 배경을 여행자 눈높이에 맞춰 설명합니다.</p>
+      <ul>
+        <li>그림, 조각, 설치 작품, 공공 예술</li>
+        <li>작가와 시대, 작품이 만들어진 배경</li>
+        <li>작품에서 눈여겨볼 디테일</li>
+        <li>박물관 가이드처럼 조금 더 깊은 해설</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">🎨</div>
+      <p class="quote">“이 작품은 빛과 색의 대비를 통해 당시 도시의 분위기를 보여줍니다. 가까이 보면 붓질의 방향이…”</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Meal mode -->
+<section class="block">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">식사 모드</p>
+      <h2>이 음식이 뭔지, 어떻게 먹는지 확인하세요.</h2>
+      <p>처음 보는 현지 음식이나 메뉴판 앞에서 사진을 찍으면 음식 이름, 주요 재료, 맛의 특징, 먹는 방법을 쉽게 정리해 줍니다.</p>
+      <ul>
+        <li>현지 음식 이름과 기본 설명</li>
+        <li>주요 재료와 매운 정도, 알레르기 확인 포인트</li>
+        <li>현지에서 보통 먹는 방법</li>
+        <li>메뉴판 사진과 함께 보면 더 쉬운 주문 준비</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">🍜</div>
+      <div class="chip-row">
+        <span class="chip">음식 이름</span>
+        <span class="chip">재료</span>
+        <span class="chip">먹는 방법</span>
+        <span class="chip">주문 준비</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Sign mode -->
+<section class="block reverse">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">표지판 모드</p>
+      <h2>표지판과 메뉴, 안내문을 한국어로 확인하세요.</h2>
+      <p>낯선 언어의 표지판, 메뉴, 티켓, 안내문을 사진으로 찍으면 단순 번역을 넘어 여행 상황에 맞게 무슨 뜻인지 설명합니다.</p>
+      <ul>
+        <li>표지판, 메뉴, 티켓, 안내문</li>
+        <li>한국어 번역과 핵심 의미 정리</li>
+        <li>주의해야 할 금지·안내 문구 확인</li>
+        <li>길 찾기나 주문 전 필요한 표현 준비</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">🪧</div>
+      <div class="chip-row">
+        <span class="chip">표지판</span>
+        <span class="chip">메뉴</span>
+        <span class="chip">티켓</span>
+        <span class="chip">안내문</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Safety Helper -->
+<section class="block">
   <div class="container block-inner">
     <div class="block-text">
       <p class="eyebrow">여행 중 긴급 상황</p>
@@ -211,8 +284,8 @@
   </div>
 </section>
 
-<!-- 3. Listen -->
-<section class="block">
+<!-- 6. Listen -->
+<section class="block reverse">
   <div class="container block-inner">
     <div class="block-text">
       <p class="eyebrow">음성으로 듣기</p>
@@ -232,8 +305,8 @@
   </div>
 </section>
 
-<!-- 4. Depth -->
-<section class="block reverse">
+<!-- 7. Depth -->
+<section class="block">
   <div class="container block-inner">
     <div class="block-text">
       <p class="eyebrow">설명 깊이 선택</p>
@@ -258,8 +331,8 @@
   </div>
 </section>
 
-<!-- 5. Nearby -->
-<section class="block">
+<!-- 8. Nearby -->
+<section class="block reverse">
   <div class="container block-inner">
     <div class="block-text">
       <p class="eyebrow">근처 추천</p>
@@ -283,8 +356,8 @@
   </div>
 </section>
 
-<!-- 6. Trips → Story -->
-<section class="block reverse">
+<!-- 9. Trips → Story -->
+<section class="block">
   <div class="container block-inner">
     <div class="block-text">
       <p class="eyebrow">여행 스토리 만들기</p>
@@ -304,8 +377,8 @@
   </div>
 </section>
 
-<!-- 7. Share / community -->
-<section class="block">
+<!-- 10. Share / community -->
+<section class="block reverse">
   <div class="container block-inner">
     <div class="block-text">
       <p class="eyebrow">공유하기</p>
@@ -329,8 +402,8 @@
   </div>
 </section>
 
-<!-- 8. Credits / earning -->
-<section class="block reverse">
+<!-- 11. Credits / earning -->
+<section class="block">
   <div class="container block-inner">
     <div class="block-text">
       <p class="eyebrow">크레딧</p>
@@ -366,21 +439,6 @@
         <div class="ic">💸</div>
         <h3>여행 경비 기록</h3>
         <p>식사·교통·숙박비를 항목별로 기록하고, 환율 환산과 CSV 내보내기까지 지원합니다.</p>
-      </div>
-      <div class="card">
-        <div class="ic">🗓️</div>
-        <h3>연말 여행 결산</h3>
-        <p>한 해 어디를 다녔는지, 어떤 여행을 좋아했는지 돌아볼 수 있는 공유 카드.</p>
-      </div>
-      <div class="card">
-        <div class="ic">🔔</div>
-        <h3>오늘의 추억 알림</h3>
-        <p>지난 여행이나 연말 결산이 준비되면 선택적으로 알려줍니다.</p>
-      </div>
-      <div class="card">
-        <div class="ic">⚡</div>
-        <h3>실시간 분석 상태</h3>
-        <p>분석 결과가 만들어지는 과정을 실시간으로 보여줍니다.</p>
       </div>
       <div class="card">
         <div class="ic">🗂️</div>
