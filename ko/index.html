@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <title>SightEcho — Travel Memory Docent</title>
-  <meta name="description" content="An AI docent that explains and narrates your travel photos — then keeps them as a lifelong travel memory. Snap a photo, hear the story, in your language." />
+  <title>SightEcho — 여행 기억 도슨트</title>
+  <meta name="description" content="여행 사진을 설명하고 들려주는 AI 도슨트 — 그리고 평생 간직하는 여행의 기억으로 남깁니다. 사진을 찍고, 이야기를 듣고, 당신의 언어로." />
 
   <!-- Open Graph / Twitter (share previews) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="SightEcho" />
-  <meta property="og:title" content="SightEcho — Travel Memory Docent" />
-  <meta property="og:description" content="An AI docent explains and narrates your travel photos, then keeps them as a lifelong travel memory." />
-  <meta property="og:url" content="https://sightechoai.com/" />
+  <meta property="og:title" content="SightEcho — 여행 기억 도슨트" />
+  <meta property="og:description" content="AI 도슨트가 여행 사진을 설명하고 들려준 뒤, 평생 간직하는 여행의 기억으로 남깁니다." />
+  <meta property="og:url" content="https://sightechoai.com/ko/" />
   <meta property="og:image" content="https://sightechoai.com/og-cover.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SightEcho — Travel Memory Docent" />
-  <meta name="twitter:description" content="An AI docent explains and narrates your travel photos, then keeps them as a lifelong travel memory." />
+  <meta name="twitter:title" content="SightEcho — 여행 기억 도슨트" />
+  <meta name="twitter:description" content="AI 도슨트가 여행 사진을 설명하고 들려준 뒤, 평생 간직하는 여행의 기억으로 남깁니다." />
   <meta name="twitter:image" content="https://sightechoai.com/og-cover.png" />
-  <link rel="canonical" href="https://sightechoai.com/" />
+  <link rel="canonical" href="https://sightechoai.com/ko/" />
 
   <!-- Brand fonts: Young Serif (display) + Inter (body) — OFL, self-servable -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,6 +47,7 @@
     .logo { font-family: 'Young Serif', serif; font-size: 24px; color: #C85A28; letter-spacing: 0; text-decoration: none; }
     nav a { color: #6B6253; text-decoration: none; margin-left: 24px; font-size: 14px; }
     nav a:hover { color: #E8703A; }
+    nav a.lang { font-weight: 700; color: #C85A28; }
 
     /* Hero */
     .hero {
@@ -58,12 +59,12 @@
       font-size: 46px;
       letter-spacing: -0.01em;
       margin: 0 0 16px;
-      line-height: 1.1;
+      line-height: 1.2;
     }
     .hero p.lead {
       font-size: 18px;
       color: #6B6253;            /* taupe */
-      max-width: 620px;
+      max-width: 640px;
       margin: 0 auto 36px;
     }
 
@@ -115,10 +116,7 @@
     }
     .shots-row {
       display: flex;
-      align-items: flex-start;          /* level the card tops (no stretch) */
-      /* safe center: centers the row when all cards fit (wide screens), but
-         falls back to start-alignment when they overflow so the first card is
-         never clipped (and can scroll). */
+      align-items: flex-start;
       justify-content: safe center;
       gap: 18px;
       overflow-x: auto;
@@ -133,48 +131,12 @@
       width: 240px;
       height: auto;
       border-radius: 22px;
-      box-shadow: 0 10px 30px rgba(42,33,24,0.12);   /* warm ink shadow */
+      box-shadow: 0 10px 30px rgba(42,33,24,0.12);
       scroll-snap-align: center;
       border: 1px solid #E7DFD0;
     }
     @media (max-width: 600px) {
       .shots-row img { width: 200px; }
-    }
-
-    /* Features */
-    .features {
-      padding: 60px 0;
-      background: #fff;
-      border-top: 1px solid #E7DFD0;
-      border-bottom: 1px solid #E7DFD0;
-    }
-    .features h2 {
-      text-align: center;
-      font-size: 28px;
-      margin: 0 0 48px;
-      letter-spacing: -0.5px;
-    }
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
-    }
-    .feature {
-      text-align: center;
-      padding: 16px;
-    }
-    .feature-icon {
-      font-size: 36px;
-      margin-bottom: 12px;
-    }
-    .feature h3 {
-      font-size: 16px;
-      margin: 0 0 8px;
-    }
-    .feature p {
-      font-size: 14px;
-      color: #6B6253;
-      margin: 0;
     }
 
     /* see-story band */
@@ -233,55 +195,55 @@
 
 <header>
   <div class="container header-inner">
-    <a class="logo" href="/">SightEcho</a>
+    <a class="logo" href="/ko/">SightEcho</a>
     <nav>
-      <a href="/features.html">Features</a>
-      <a href="https://www.see-story.com" target="_blank" rel="noopener">Stories</a>
-      <a href="/pricing.html">Pricing</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-      <a href="/support.html">Support</a>
-      <a href="/ko/" style="font-weight:700;color:#C85A28">한국어</a>
+      <a href="/ko/features.html">기능</a>
+      <a href="https://www.see-story.com" target="_blank" rel="noopener">스토리</a>
+      <a href="/ko/pricing.html">요금</a>
+      <a href="/privacy.html">개인정보</a>
+      <a href="/terms.html">약관</a>
+      <a href="/ko/support.html">고객지원</a>
+      <a class="lang" href="/">EN</a>
     </nav>
   </div>
 </header>
 
 <section class="hero">
   <div class="container">
-    <h1>Discover the story<br/>behind every photo.</h1>
-    <p class="lead">SightEcho is an AI docent for your travels. Snap a photo and hear the place, art, food, and signs explained out loud — and when the trip ends, your photos become a travel story you can revisit for years.</p>
+    <h1>사진 속에 담긴<br/>이야기를 발견하세요.</h1>
+    <p class="lead">SightEcho는 당신의 여행을 위한 AI 도슨트입니다. 사진 한 장을 찍으면 그 장소와 예술, 음식, 표지판을 소리로 설명해 드리고 — 여행이 끝나면 사진들은 몇 년이 지나도 다시 펼쳐 볼 수 있는 여행 이야기가 됩니다.</p>
     <div class="download-row">
       <!-- iOS: LIVE — App Store approved 2026-06-25. -->
       <a class="download-btn" href="https://apps.apple.com/app/id6764697758" target="_blank" rel="noopener">
-        Download on the App Store
+        App Store에서 다운로드
       </a>
-      <!-- Android: still on Play internal testing; flip to live (remove "disabled" + "Coming Soon") once the production listing is approved. -->
+      <!-- Android: still on Play internal testing. -->
       <a class="download-btn disabled" href="https://play.google.com/store/apps/details?id=com.sightecho.app" target="_blank" rel="noopener">
-        Get it on Google Play
-        <span class="badge-soon">Coming Soon</span>
+        Google Play에서 받기
+        <span class="badge-soon">출시 예정</span>
       </a>
     </div>
   </div>
 </section>
 
 <section class="shots">
-  <h2>See it in action</h2>
+  <h2>직접 확인해 보세요</h2>
   <div class="shots-row">
-    <img src="/screenshots/01-identify.png" alt="What am I looking at? — snap a photo and hear what it is" loading="lazy" />
-    <img src="/screenshots/02-anything.png" alt="Point your camera at anything — landmarks, art, meals, signs" loading="lazy" />
-    <img src="/screenshots/03-listen.png" alt="Tap once, hear the full story — expert audio narration" loading="lazy" />
-    <img src="/screenshots/04-nearby.png" alt="What's worth seeing nearby — real spots with walk times" loading="lazy" />
-    <img src="/screenshots/05-travelogue.png" alt="Your trip, written up — photos become a travelogue" loading="lazy" />
-    <img src="/screenshots/06-language.png" alt="Kept for years, in your language — 62 languages, each with audio narration" loading="lazy" />
+    <img src="/screenshots/01-identify.png" alt="이게 뭐지? — 사진을 찍으면 무엇인지 들려줍니다" loading="lazy" />
+    <img src="/screenshots/02-anything.png" alt="무엇이든 카메라로 — 랜드마크, 예술, 음식, 표지판" loading="lazy" />
+    <img src="/screenshots/03-listen.png" alt="한 번 누르면 이야기 전체를 — 전문가급 오디오 내레이션" loading="lazy" />
+    <img src="/screenshots/04-nearby.png" alt="주변에 볼 만한 곳 — 도보 시간과 함께 실제 장소" loading="lazy" />
+    <img src="/screenshots/05-travelogue.png" alt="여행이 한 편의 글로 — 사진이 여행기가 됩니다" loading="lazy" />
+    <img src="/screenshots/06-language.png" alt="당신의 언어로 오래도록 — 62개 언어, 각 언어 음성 해설" loading="lazy" />
   </div>
 </section>
 
 <section class="seestory">
   <div class="container">
-    <h2>Your trips become stories worth sharing</h2>
-    <p>When a trip ends, SightEcho writes it up as a travel story from your photos. Publish it on see-story — a community where travelers discover each other's journeys.</p>
+    <h2>여행이 나누고 싶은 이야기가 됩니다</h2>
+    <p>여행이 끝나면 SightEcho가 당신의 사진으로 여행 이야기를 써 드립니다. 여행자들이 서로의 여정을 발견하는 커뮤니티, see-story에 발행해 보세요.</p>
     <a class="seestory-btn" href="https://www.see-story.com" target="_blank" rel="noopener">
-      Explore see-story →
+      see-story 둘러보기 →
     </a>
   </div>
 </section>
@@ -289,11 +251,11 @@
 <footer>
   <div class="container">
     <a href="https://www.see-story.com" target="_blank" rel="noopener">see-story</a>
-    <a href="/pricing.html">Pricing</a>
-    <a href="/privacy.html">Privacy Policy</a>
-    <a href="/terms.html">Terms of Service</a>
-    <a href="/support.html">Support</a>
-    <a href="/account-deletion.html">Delete Account</a>
+    <a href="/ko/pricing.html">요금</a>
+    <a href="/privacy.html">개인정보 처리방침</a>
+    <a href="/terms.html">이용약관</a>
+    <a href="/ko/support.html">고객지원</a>
+    <a href="/account-deletion.html">계정 삭제</a>
     <div class="copyright">© 2026 SightEcho. All rights reserved.</div>
   </div>
 </footer>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <title>기능 — SightEcho</title>
+  <meta name="description" content="SightEcho의 모든 기능: 사진으로 랜드마크·예술·음식·표지판 식별, 당신의 언어로 음성 해설, 긴급 상황 도움, 주변 장소 추천, 여행 경비 기록, 그리고 여행을 한 편의 이야기로 — 62개 언어로." />
+
+  <!-- Open Graph / Twitter (share previews) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SightEcho" />
+  <meta property="og:title" content="기능 — SightEcho" />
+  <meta property="og:description" content="사진으로 무엇이든 식별하고, 당신의 언어로 들으며, 여행을 한 편의 이야기로 만드세요." />
+  <meta property="og:url" content="https://sightechoai.com/ko/features.html" />
+  <meta property="og:image" content="https://sightechoai.com/og-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="기능 — SightEcho" />
+  <meta name="twitter:description" content="사진으로 무엇이든 식별하고, 당신의 언어로 들으며, 여행을 한 편의 이야기로 만드세요." />
+  <meta name="twitter:image" content="https://sightechoai.com/og-cover.png" />
+  <link rel="canonical" href="https://sightechoai.com/ko/features.html" />
+
+  <!-- Brand fonts: Young Serif (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      margin: 0;
+      color: #2A2118;            /* ink */
+      line-height: 1.6;
+      background: #FBF8F2;       /* warm ivory — brand bg */
+    }
+    .container { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header { padding: 24px 0; border-bottom: 1px solid #E7DFD0; background: #FBF8F2; }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: 'Young Serif', serif; font-size: 24px; color: #C85A28; letter-spacing: 0; text-decoration: none; }
+    nav a { color: #6B6253; text-decoration: none; margin-left: 24px; font-size: 14px; }
+    nav a:hover { color: #E8703A; }
+    nav a.active { color: #C85A28; font-weight: 600; }
+    nav a.lang { font-weight: 700; color: #C85A28; }
+
+    /* Hero */
+    .hero { padding: 72px 0 48px; text-align: center; }
+    .hero h1 { font-family: 'Young Serif', serif; font-size: 42px; letter-spacing: -0.01em; margin: 0 0 16px; line-height: 1.25; }
+    .hero p.lead { font-size: 18px; color: #6B6253; max-width: 660px; margin: 0 auto; }
+
+    /* Feature blocks (alternating) */
+    .block { padding: 56px 0; border-top: 1px solid #E7DFD0; }
+    .block:nth-child(even) { background: #fff; }
+    .block-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .block.reverse .block-text { order: 2; }
+    .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #C85A28; margin: 0 0 10px; }
+    .block h2 { font-family: 'Young Serif', serif; font-size: 26px; letter-spacing: -0.01em; margin: 0 0 14px; line-height: 1.3; }
+    .block p { font-size: 16px; color: #4A4031; margin: 0 0 14px; }
+    .block ul { margin: 0; padding: 0; list-style: none; }
+    .block li { font-size: 15px; color: #4A4031; padding: 6px 0 6px 26px; position: relative; }
+    .block li::before { content: "→"; position: absolute; left: 0; color: #E8703A; font-weight: 700; }
+    .block a.inline { color: #C85A28; text-decoration: none; }
+    .block a.inline:hover { text-decoration: underline; }
+
+    /* Illustrative panel */
+    .panel { background: linear-gradient(160deg, #FFF6EC 0%, #F7ECDC 100%); border: 1px solid #E7DFD0; border-radius: 22px; padding: 28px; box-shadow: 0 10px 30px rgba(42,33,24,0.08); }
+    .panel .panel-icon { font-size: 40px; margin-bottom: 14px; }
+    .panel .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { display: inline-block; background: #fff; border: 1px solid #E7DFD0; color: #6B6253; font-size: 13px; padding: 7px 12px; border-radius: 999px; }
+    .panel .quote { font-size: 15px; color: #4A4031; line-height: 1.7; }
+    .panel .quote strong { color: #C85A28; }
+    .tier-card { background: #fff; border: 1px solid #E7DFD0; border-radius: 14px; padding: 16px 18px; margin-bottom: 12px; }
+    .tier-card:last-child { margin-bottom: 0; }
+    .tier-card h4 { margin: 0 0 4px; font-size: 15px; color: #2A2118; }
+    .tier-card p { margin: 0; font-size: 13px; color: #6B6253; }
+
+    /* "Everything else" grid */
+    .more { padding: 64px 0; border-top: 1px solid #E7DFD0; background: #fff; }
+    .more h2 { font-family: 'Young Serif', serif; text-align: center; font-size: 28px; margin: 0 0 8px; letter-spacing: -0.01em; }
+    .more .sub { text-align: center; color: #6B6253; font-size: 16px; margin: 0 auto 40px; max-width: 560px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
+    .card { padding: 4px; }
+    .card .ic { font-size: 30px; margin-bottom: 10px; }
+    .card h3 { font-size: 16px; margin: 0 0 6px; }
+    .card p { font-size: 14px; color: #6B6253; margin: 0; }
+
+    /* Languages strip */
+    .lang-band { padding: 64px 0; text-align: center; border-top: 1px solid #E7DFD0; }
+    .lang-band h2 { font-family: 'Young Serif', serif; font-size: 28px; margin: 0 0 12px; letter-spacing: -0.01em; }
+    .lang-band p { font-size: 16px; color: #6B6253; max-width: 660px; margin: 0 auto 28px; }
+    .lang-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; max-width: 760px; margin: 0 auto; }
+    .lang-chips .chip { background: #FBF8F2; }
+
+    /* CTA */
+    .cta { padding: 72px 0; text-align: center; background: #fff; border-top: 1px solid #E7DFD0; }
+    .cta h2 { font-family: 'Young Serif', serif; font-size: 28px; margin: 0 0 24px; letter-spacing: -0.01em; }
+    .download-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .download-btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 22px; border-radius: 10px; background: #E8703A; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; }
+    .download-btn:hover { background: #C85A28; }
+    .download-btn.disabled { background: #CFC3AE; cursor: not-allowed; pointer-events: none; }
+    .badge-soon { font-size: 11px; background: rgba(255,255,255,0.2); padding: 2px 6px; border-radius: 4px; margin-left: 4px; }
+
+    /* Footer */
+    footer { padding: 40px 0; text-align: center; color: #A99F8C; font-size: 13px; }
+    footer a { color: #A99F8C; text-decoration: none; margin: 0 12px; }
+    footer a:hover { color: #C85A28; }
+    .copyright { margin-top: 16px; font-size: 12px; color: #B8AE9B; }
+
+    @media (max-width: 760px) {
+      .block-inner { grid-template-columns: 1fr; gap: 24px; }
+      .block.reverse .block-text { order: 0; }
+      .hero h1 { font-size: 30px; }
+      .hero p.lead { font-size: 16px; }
+      nav a { margin-left: 12px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a class="logo" href="/ko/">SightEcho</a>
+    <nav>
+      <a href="/ko/features.html" class="active">기능</a>
+      <a href="https://www.see-story.com" target="_blank" rel="noopener">스토리</a>
+      <a href="/ko/pricing.html">요금</a>
+      <a href="/privacy.html">개인정보</a>
+      <a href="/terms.html">약관</a>
+      <a href="/ko/support.html">고객지원</a>
+      <a class="lang" href="/features.html">EN</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>사진에서 이야기로,<br/>당신의 AI 여행 도슨트.</h1>
+    <p class="lead">여행에서 마주치는 무엇이든 — 기념물, 그림, 음식 한 접시, 거리 표지판 — 카메라를 향하면 SightEcho가 그것이 무엇이고 왜 의미 있는지 당신의 언어로 소리 내어 알려 줍니다. 긴급 상황에서 도와주고, 주변에 볼 만한 곳을 찾아 주며, 지출을 기록하고, 여행 전체를 몇 년 동안 간직할 한 편의 이야기로 만들어 줍니다.</p>
+  </div>
+</section>
+
+<!-- 1. Identify -->
+<section class="block">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">찍고 · 식별하기</p>
+      <h2>사진을 찍으면, 무엇을 보고 있는지 알게 됩니다.</h2>
+      <p>SightEcho가 사진을 읽고 그 대상을 쉽고 전문적인 언어로 설명합니다 — 입력도, 검색도 필요 없습니다. 순간에 맞는 모드를 고르세요.</p>
+      <ul>
+        <li>트래블 — 랜드마크, 예술, 조각, 건축</li>
+        <li>식사 — 요리와 현지 음식: 무엇이고 어떻게 먹는지</li>
+        <li>표지판 — 표지판·메뉴·티켓·안내문을 당신의 언어로</li>
+        <li>한 사진을 언제든 다른 모드로 전환</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">📸</div>
+      <div class="chip-row">
+        <span class="chip">랜드마크</span>
+        <span class="chip">예술</span>
+        <span class="chip">음식</span>
+        <span class="chip">표지판 · 메뉴</span>
+        <span class="chip">건축</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Safety Helper -->
+<section class="block reverse">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">문제가 생겼을 때</p>
+      <h2>중요한 순간을 위한 안전 도우미.</h2>
+      <p>낯선 곳에서의 사고는 더 당황스럽습니다. 무슨 일인지 고르면 SightEcho가 차분하게, 무료로 안내합니다.</p>
+      <ul>
+        <li>상황: 도난, 사고, 의료, 분실 등</li>
+        <li>지금 해야 할 일을 단계별로</li>
+        <li>말하거나 보여 줄 핵심 현지어 표현</li>
+        <li>주변 도움 — 시설과 연락처</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">🆘</div>
+      <div class="chip-row">
+        <span class="chip">도난</span>
+        <span class="chip">사고</span>
+        <span class="chip">의료</span>
+        <span class="chip">분실</span>
+        <span class="chip">항상 무료</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Listen -->
+<section class="block">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">듣기</p>
+      <h2>한 번 누르면 — 이야기 전체를 듣습니다.</h2>
+      <p>모든 설명은 읽거나 자연스러운 음성으로 들을 수 있습니다. 휴대폰을 주머니에 넣고 계속 걸어도 — 내레이션은 멈추지 않습니다.</p>
+      <ul>
+        <li>당신의 언어로 생생한 음성 내레이션</li>
+        <li>백그라운드 · 잠금 화면에서도 재생</li>
+        <li>제어 센터 · 이어폰 버튼으로 조작</li>
+        <li>언제든 다시 듣기 — 재생은 무료</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">🎧</div>
+      <p class="quote">“이것은 <strong>사그라다 파밀리아</strong>, 1882년에 착공된 가우디의 미완성 대성당입니다. 지금 보고 계신 탑들은…”</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Depth -->
+<section class="block reverse">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">당신에게 맞춰서</p>
+      <h2>간단한 답, 혹은 도슨트의 깊은 해설.</h2>
+      <p>어떤 순간엔 한 줄이면 충분하고, 어떤 순간엔 깊이 파고들 가치가 있습니다. 한 번만 설정하면 모든 설명이 알맞은 깊이로 도착합니다.</p>
+      <ul>
+        <li>당신의 지식 수준과 설명 깊이 선택</li>
+        <li>현장인지, 이동 중인지, 나중에 회상하는지 알려 주기</li>
+        <li>설정은 여행마다 기억됩니다</li>
+      </ul>
+    </div>
+    <div>
+      <div class="tier-card">
+        <h4>SightEcho — 간단한 해설</h4>
+        <p>보고 있는 것에 대한 명확하고 간결한 설명. 이동 중에 딱 좋습니다.</p>
+      </div>
+      <div class="tier-card">
+        <h4>InsightEcho — 도슨트의 깊은 해설</h4>
+        <p>역사와 맥락, 그리고 훌륭한 박물관 가이드가 덧붙일 디테일까지 — 이야기 전부를.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Nearby -->
+<section class="block">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">내 주변</p>
+      <h2>주변에 볼 만한 곳을 발견하세요.</h2>
+      <p>SightEcho가 현재 위치를 활용해 주변의 실제 장소를 추천합니다 — 도보 시간과 함께라, 실제로 걸어갈 수 있는 곳을 알 수 있습니다.</p>
+      <ul>
+        <li>잠깐 들를 만한 주변 명소</li>
+        <li>주변 식당과 현지 음식</li>
+        <li>각 장소까지 도보 거리와 시간</li>
+        <li>검증된 영업시간·정보, 한 번 탭으로 길안내</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">🧭</div>
+      <div class="chip-row">
+        <span class="chip">박물관 · 도보 4분</span>
+        <span class="chip">전망대 · 9분</span>
+        <span class="chip">카페 · 2분</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Trips → Story -->
+<section class="block reverse">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">여행에서 여행기로</p>
+      <h2>당신의 사진이 한 편의 여행 이야기가 됩니다.</h2>
+      <p>SightEcho가 담아 둔 장소들을 여행 단위로 정리합니다. 여행이 끝나면 당신의 사진으로, 당신이 고른 문체로 여정 전체를 글로 써 드립니다.</p>
+      <ul>
+        <li>사진을 이름 붙인 여행으로 묶고, 타임라인으로</li>
+        <li>세 가지 문체로 생성: 여행기, 가이드북, 인스타</li>
+        <li>마음에 들 때까지 재생성하거나 편집</li>
+        <li>어떤 여행이든 다시 펼쳐 보기 — 카메라 롤에 묻히지 않고 몇 년 동안</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">📖</div>
+      <p class="quote">“<strong>둘째 날 — 바르셀로나.</strong> 아침은 고딕 지구에서 시작됐다. 좁은 골목이 이내…”</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Share / community -->
+<section class="block">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">나누기</p>
+      <h2>당신의 여정을 see-story에 발행하세요.</h2>
+      <p>끝난 여행을 나누고 싶은 이야기로 만들어 <a class="inline" href="https://www.see-story.com" target="_blank" rel="noopener">see-story</a>에 발행하세요 — 여행자들이 서로의 여정을 발견하는 커뮤니티입니다.</p>
+      <ul>
+        <li>스토리마다 비공개·링크 공개·전체 공개 선택</li>
+        <li>하나의 발견을 링크로 공유</li>
+        <li>작가는 자기 블로그를 연결해 자신의 목소리로</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">🌍</div>
+      <div class="chip-row">
+        <span class="chip">비공개</span>
+        <span class="chip">링크 공개</span>
+        <span class="chip">전체 공개</span>
+        <span class="chip">나의 문체</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Credits / earning -->
+<section class="block reverse">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">크레딧</p>
+      <h2>무료로 시작하세요. 원할 때만 충전.</h2>
+      <p>새 계정은 무료 크레딧으로 시작합니다. 쓰면서 더 모으거나, 필요할 때 팩을 구매하세요 — 선택은 당신의 몫입니다.</p>
+      <ul>
+        <li>가입하면 무료 크레딧 지급</li>
+        <li>짧은 광고를 보고 크레딧 적립</li>
+        <li>추천 코드로 친구 초대 — 둘 다 크레딧 지급</li>
+        <li>더 필요하면 크레딧 팩 구매</li>
+      </ul>
+      <p style="margin-top:6px;"><a class="inline" href="/ko/pricing.html">크레딧이 어떻게 쓰이는지 보기 →</a></p>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">✨</div>
+      <div class="chip-row">
+        <span class="chip">가입 보너스</span>
+        <span class="chip">광고로 적립</span>
+        <span class="chip">친구 추천</span>
+        <span class="chip">크레딧 팩</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Everything else grid -->
+<section class="more">
+  <div class="container">
+    <h2>앱 안에 더 많은 기능이</h2>
+    <p class="sub">여행 한 번을 더 쉽게 담고, 기억하고, 관리하게 해 주는 작은 디테일들.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="ic">💸</div>
+        <h3>여행 경비 기록</h3>
+        <p>식사·교통·숙박 등을 항목별로 기록하고 환율로 환산 — CSV로 내보내기까지.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🗓️</div>
+        <h3>연말 여행 결산</h3>
+        <p>한 해 어디를 다녔는지, 당신의 여행자 유형은 무엇인지 — 돌아볼 수 있는 공유 카드.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🔔</div>
+        <h3>오늘의 추억 알림</h3>
+        <p>지난 여행과 연말 결산이 준비되면 살며시 알려 주는 선택형 알림.</p>
+      </div>
+      <div class="card">
+        <div class="ic">⚡</div>
+        <h3>실시간 분석 상태</h3>
+        <p>결과가 만들어지는 과정을 실시간으로 — 새로고침도, 기다림의 답답함도 없이.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🗂️</div>
+        <h3>언제든 정리</h3>
+        <p>여행 이름을 바꾸고, 어떤 사진이든 다른 여행으로 옮기세요.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🌐</div>
+        <h3>62개 언어</h3>
+        <p>고른 언어로 분석과 음성을. 첫 실행 시 설정하고 언제든 변경.</p>
+      </div>
+      <div class="card">
+        <div class="ic">💱</div>
+        <h3>나의 기준 통화</h3>
+        <p>여행 지출을 당신이 실제로 쓰는 통화로 환산해 보여 줍니다.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🔐</div>
+        <h3>안전한 계정</h3>
+        <p>이메일 로그인, 안전한 토큰 저장, 비밀번호 재설정·변경 기본 제공.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Languages -->
+<section class="lang-band">
+  <div class="container">
+    <h2>62개 언어 — 분석도 음성도, 당신의 언어로.</h2>
+    <p>언어를 한 번만 고르세요. 모든 설명이 그 언어로 작성되고 내레이션됩니다 — 중요한 곳에서는 지역 발음까지(미국·영국·호주·인도 영어, 유럽·라틴아메리카 스페인어, 브라질·유럽 포르투갈어, 프랑스·캐나다 프랑스어).</p>
+    <div class="lang-chips">
+      <span class="chip">English</span><span class="chip">한국어</span><span class="chip">日本語</span>
+      <span class="chip">中文</span><span class="chip">Español</span><span class="chip">Français</span>
+      <span class="chip">Deutsch</span><span class="chip">Português</span><span class="chip">Italiano</span>
+      <span class="chip">العربية</span><span class="chip">हिन्दी</span><span class="chip">Русский</span>
+      <span class="chip">ภาษาไทย</span><span class="chip">Tiếng Việt</span><span class="chip">Bahasa</span>
+      <span class="chip">+ 47개 더</span>
+    </div>
+  </div>
+</section>
+
+<!-- Privacy -->
+<section class="block">
+  <div class="container block-inner">
+    <div class="block-text">
+      <p class="eyebrow">당신의 것</p>
+      <h2>데이터가 아니라, 당신의 여행을 중심으로.</h2>
+      <p>사진과 이야기는 당신의 계정에 묶여 있습니다. 카메라와 위치는 본연의 일 — 눈앞의 것을 식별하고 주변을 찾는 데 —에만 쓰이며, 당신이 선택하기 전엔 아무것도 공개되지 않습니다.</p>
+      <ul>
+        <li>발행하기 전까지 이야기는 비공개</li>
+        <li>위치는 주변 추천에만 사용</li>
+        <li>언제든 <a class="inline" href="/account-deletion.html">계정과 데이터 삭제</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-icon">🔒</div>
+      <div class="chip-row">
+        <span class="chip">기본 비공개</span>
+        <span class="chip">공개는 당신이</span>
+        <span class="chip">언제든 삭제</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>SightEcho와 함께 탐험을 시작하세요.</h2>
+    <div class="download-row">
+      <a class="download-btn" href="https://apps.apple.com/app/id6764697758" target="_blank" rel="noopener">
+        App Store에서 다운로드
+      </a>
+      <a class="download-btn disabled" href="https://play.google.com/store/apps/details?id=com.sightecho.app" target="_blank" rel="noopener">
+        Google Play에서 받기
+        <span class="badge-soon">출시 예정</span>
+      </a>
+    </div>
+    <p style="margin-top:18px;font-size:14px;color:#6B6253;">새 계정은 무료 크레딧으로 시작합니다. <a href="/ko/pricing.html" style="color:#C85A28;">크레딧 안내 보기</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <a href="/ko/features.html">기능</a>
+    <a href="https://www.see-story.com" target="_blank" rel="noopener">see-story</a>
+    <a href="/ko/pricing.html">요금</a>
+    <a href="/privacy.html">개인정보 처리방침</a>
+    <a href="/terms.html">이용약관</a>
+    <a href="/ko/support.html">고객지원</a>
+    <a href="/account-deletion.html">계정 삭제</a>
+    <div class="copyright">© 2026 SightEcho. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -6,4 +6,8 @@
   <url><loc>https://sightechoai.com/support.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://sightechoai.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://sightechoai.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://sightechoai.com/ko/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://sightechoai.com/ko/features.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sightechoai.com/ko/pricing.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://sightechoai.com/ko/support.html</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
 </urlset>
