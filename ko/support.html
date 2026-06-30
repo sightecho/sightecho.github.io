@@ -29,6 +29,19 @@
     .logo { font-family: 'Young Serif', serif; font-size: 24px; color: #C85A28; letter-spacing: 0; text-decoration: none; }
     nav a { color: #6B6253; text-decoration: none; margin-left: 20px; font-size: 14px; }
     nav a:hover { color: #A8430F; }
+    nav select.lang-select {
+      appearance: none; -webkit-appearance: none;
+      margin-left: 20px; padding: 5px 26px 5px 28px;
+      border: 1px solid #E7DFD0; border-radius: 999px;
+      background-color: #fff; color: #2A2118;
+      font-family: inherit; font-size: 13px; font-weight: 600; line-height: 1.2; cursor: pointer;
+      background-image:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23C85A28' stroke-width='2'><circle cx='12' cy='12' r='10'/><line x1='2' y1='12' x2='22' y2='12'/><path d='M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20'/></svg>"),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23C85A28' stroke-width='3'><path d='M6 9l6 6 6-6'/></svg>");
+      background-repeat: no-repeat, no-repeat;
+      background-position: left 9px center, right 9px center;
+    }
+    nav select.lang-select:hover { border-color: #C85A28; }
     nav a.lang { font-weight: 700; color: #C85A28; }
     main { padding: 48px 0 64px; }
     h1 { font-family: 'Young Serif', serif; font-size: 32px; letter-spacing: -0.5px; margin: 0 0 8px; }
@@ -57,7 +70,10 @@
       <a href="/privacy.html">개인정보</a>
       <a href="/terms.html">이용약관</a>
       <a href="/ko/support.html">고객지원</a>
-      <a class="lang" href="/support.html">EN</a>
+      <select class="lang-select" aria-label="Language" onchange="if(this.value)location.href=this.value">
+        <option value="/support.html">English</option>
+        <option value="/ko/support.html" selected>한국어</option>
+      </select>
     </nav>
   </div>
 </header>
