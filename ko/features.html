@@ -128,6 +128,17 @@
       .hero p.lead { font-size: 16px; }
       nav a { margin-left: 12px; font-size: 13px; }
     }
+  
+  /* === Features full-bleed photo hero (added 2026-06-30) === */
+  .hero { position: relative; overflow: hidden;
+    background: url(/hero/feature-bg.jpg) center 42%/cover no-repeat; }
+  .hero::before { content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(70% 80% at 50% 46%, rgba(16,10,5,0.66) 0%, rgba(16,10,5,0.42) 55%, rgba(16,10,5,0.12) 100%),
+      linear-gradient(180deg, rgba(16,10,5,0.40) 0%, rgba(16,10,5,0.12) 34%, rgba(16,10,5,0.30) 78%, rgba(16,10,5,0.66) 100%); }
+  .hero .container { position: relative; z-index: 1; }
+  .hero h1 { color: #FBF8F2; text-shadow: 0 2px 22px rgba(0,0,0,0.6), 0 1px 3px rgba(0,0,0,0.5); }
+  .hero p.lead { color: #FBF8F2; text-shadow: 0 1px 14px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.5); }
   </style>
 </head>
 <body>

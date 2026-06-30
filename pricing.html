@@ -71,6 +71,18 @@
     footer a { color: #A99F8C; text-decoration: none; margin: 0 12px; }
     footer a:hover { color: #A8430F; }
     .copyright { margin-top: 16px; font-size: 12px; color: #B8AE9B; }
+  
+  /* === Pricing photo header band (added 2026-06-30) === */
+  .price-hero { position: relative; overflow: hidden; text-align: center;
+    padding: 70px 0 52px; background: url(/hero/pricing-bg.jpg) center 40%/cover no-repeat; }
+  .price-hero::before { content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(80% 95% at 50% 42%, rgba(16,10,5,0.62) 0%, rgba(16,10,5,0.44) 60%, rgba(16,10,5,0.30) 100%),
+      linear-gradient(180deg, rgba(16,10,5,0.40) 0%, rgba(16,10,5,0.22) 45%, rgba(251,248,242,0.96) 100%); }
+  .price-hero .container { position: relative; z-index: 1; }
+  .price-hero h1 { color: #FBF8F2; text-shadow: 0 2px 20px rgba(0,0,0,0.6), 0 1px 3px rgba(0,0,0,0.5); margin-top: 0; }
+  .price-hero p.sub { color: #FBF8F2; text-shadow: 0 1px 12px rgba(0,0,0,0.7); }
+  /* main keeps its first real section (subscriptions) on clean ivory */
   </style>
 </head>
 <body>
@@ -93,10 +105,16 @@
   </div>
 </header>
 
-<main>
+<section class="price-hero">
   <div class="container">
     <h1>Plans &amp; Pricing</h1>
     <p class="sub">SightEcho is free to start with signup credits. Subscribe for monthly credits and publishing, or top up anytime with one-time credit packs.</p>
+  </div>
+</section>
+
+<main>
+  <div class="container">
+    
 
     <h2>Subscriptions</h2>
     <div class="sub-grid">
